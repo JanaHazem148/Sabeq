@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+
+<title>Contact - SABEQ</title>
+<meta name="description" content="Get in touch with SABEQ today. Contact us for marketing solutions, partnerships, and tailored plans to grow your business.">
+
+<!-- Favicon -->
+<link rel="icon" href="Images/LogoMarkPNG.png" type="image/png" />
+
+</head>
+<body>
+    
+
+<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="Images/FullLogoPNG.png" alt="logo" style="width:100px; height:auto;">
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active mx-3" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link mx-3" href="home.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html">About us</a></li>
+        <li class="nav-item"><a class="nav-link mx-3" href="plans.html"> Plans</a></li>
+        <li class="nav-item"><a class="nav-link mx-3" href="ContactUs.html"><b  style="color:#007bff;">Contact Us</b></a></li>
+        <li class="nav-item"><a class="nav-link disabled mx-3">Coming Soon</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- النص -->
+      <div class="col-lg-6">
+        <p class="text-warning fw-semibold mb-2">
+          📩 Contact Us
+        </p>
+        <br>
+        
+        <h1 class="fw-bold mb-3">
+          <span class="text-primary border-3 border-primary pb-1">Contact</span> Us..
+        </h1>
+        <br>
+        
+        <p class="lead text-muted">
+          Every conversation is the beginning of a successful partnership.. 
+          Fill in your details and let us reach out to help you build a strong presence for your brand.
+        </p>
+      </div>
+
+      <!-- الصورة -->
+      <div class="col-lg-6 text-center">
+        <img src="Images/contactus.png" class="img-fluid" alt="Contact Us Illustration">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<br>
+<hr>
+
+<div class="container mt-5" id="contact">
+
+  <!-- معلومات التواصل فوق -->
+  <div class="d-flex flex-wrap justify-content-center gap-4 mb-5 text-center">
+    <div class="d-flex align-items-center gap-2">
+      <span class="text-primary fs-5">📧</span>
+      <span><b>info@sabeq-sa.com</b></span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <span class="text-primary fs-5">📞</span>
+      <span><b>0537993036 </b></span>
+    </div>
+    
+  </div>
+
+  <!-- الفورم -->
+  <form action="https://formspree.io/f/xkgvqbow" method="POST" 
+        class="p-4 rounded-4 shadow-sm mx-auto" 
+        style="max-width: 700px; background: #f9fcff;">
+
+    <!-- Full Name + Email -->
+    <div class="row mb-4">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <input type="text" class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm" 
+                id="fullName" name="fullName" placeholder="Full Name" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm" 
+                id="emailAddress" name="emailAddress" placeholder="Email" required>
+      </div>
+    </div>
+
+    <!-- Choose Your Brand -->
+    <div class="mb-4">
+      <label class="form-label fw-semibold">Choose Your Brand</label>
+      <div class="d-flex flex-wrap gap-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="resturant" name="brand[]" value="Resturant" checked>
+          <label class="form-check-label" for="resturant">Resturant</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="cafe" name="brand[]" value="Cafe">
+          <label class="form-check-label" for="cafe">Cafe</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="brands" name="brand[]" value="Brands">
+          <label class="form-check-label" for="brands">Brands</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="others" name="brand[]" value="Others">
+          <label class="form-check-label" for="others">Others</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="mb-4">
+      <textarea class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm" 
+                id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+
+    <!-- زر الإرسال -->
+    <div class="text-center">
+      <button type="submit" class="wavy-btn"><div class ="text">Send Message</div>
+          <div class="wave"></div>
+        </button>
+    </div>
+
+  </form>
+</div>
+<br><br><hr>
+<!-- Footer -->
+<footer class="pt-4" style="
+  background: linear-gradient(90deg, #0d6efd, #29abe2);
+  color: white;
+">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- جهة اليسار -->
+      <div class="col-md-6 mb-3 mb-md-0">
+        <h4 class="fw-bold mb-1">  <img src="Images/LogoMarkPNG.png" alt="logo" style="width:40px; height:auto;"></h4>
+        <p class="mb-0">We craft marketing solutions that go beyond expectations..</p>
+      </div>
+      <!-- جهة اليمين -->
+      <div class="col-md-6 text-md-end">
+        <p class="mb-1">
+          <i class="bi bi-envelope-fill me-2"></i>info@sabeq-sa.com
+        </p>
+        <p class="mb-0">
+          <i class="bi bi-telephone-fill me-2"></i>0537993036
+        </p>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <hr class="border-light">
+    <div class="d-flex justify-content-center mb-3">
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
+        <li class="list-inline-item mx-3"><a href="home.html#services" class="text-white text-decoration-none">Services</a></li>
+        <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+        <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
+      </ul>
+    </div>
+
+  <br>
+
+<script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
