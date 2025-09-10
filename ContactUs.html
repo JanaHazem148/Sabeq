@@ -85,89 +85,108 @@
 
 
 <hr>
-
 <div class="container mt-5" id="contact">
 
   <!-- معلومات التواصل فوق -->
-<div class="d-flex flex-wrap justify-content-center align-items-center mb-5 text-center gap-5">
-  <div class="d-flex align-items-center gap-2">
-    <i class="bi bi-envelope-fill text-info fs-5"></i>
-    <span><b>info@sabeq-sa.com</b></span>
+  <div class="d-flex flex-wrap justify-content-center align-items-center mb-5 text-center gap-5">
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-envelope-fill text-info fs-5"></i>
+      <span><b>info@sabeq-sa.com</b></span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-telephone-fill text-info fs-5"></i>
+      <span><b>0537993036</b></span>
+    </div>
   </div>
-  <div class="d-flex align-items-center gap-2">
-    <i class="bi bi-telephone-fill text-info fs-5"></i>
-    <span><b>0537993036</b></span>
-  </div>
+
+  <!-- الفورم -->
+  <form action="https://formspree.io/f/xkgvqbow" method="POST" 
+        class="p-4 rounded-4 shadow-sm mx-auto" 
+       style="max-width: 700px; background: rgba(0, 123, 255, 0.03);"
+
+       >
+
+
+    <!-- Full Name + Email -->
+    <div class="row mb-4 justify-content-center">
+      <div class="col-md-5 mb-3 mb-md-0">
+        <div class="p-3 bg-white rounded-3 shadow-sm">
+          <label for="fullName" class="form-label fw-bold">Full Name</label>
+          <input type="text" 
+                 class="form-control border-0 border-bottom rounded-0 text-center" 
+                 id="fullName" 
+                 name="fullName" 
+                 placeholder="Enter your full name" 
+                 required>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="p-3 bg-white rounded-3 shadow-sm">
+          <label for="emailAddress" class="form-label fw-bold">Email</label>
+          <input type="email" 
+                 class="form-control border-0 border-bottom rounded-0 text-center" 
+                 id="emailAddress" 
+                 name="emailAddress" 
+                 placeholder="Enter your email" 
+                 required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Choose Your Brand -->
+    <div class="mb-4">
+      <div class="p-3 bg-white rounded-3 shadow-sm">
+        <label class="form-label fw-bold d-block">Choose Your Brand</label>
+        <div class="row justify-content-center">
+          <div class="col-md-6 d-flex justify-content-center mb-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="restaurant" name="brand" value="Restaurant" checked>
+              <label class="form-check-label" for="restaurant">Restaurant</label>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center mb-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="cafe" name="brand" value="Cafe">
+              <label class="form-check-label" for="cafe">Cafe</label>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center mb-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="brands" name="brand" value="Brands">
+              <label class="form-check-label" for="brands">Brands</label>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center mb-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="others" name="brand" value="Others">
+              <label class="form-check-label" for="others">Others</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="mb-4">
+      <div class="p-3 bg-white rounded-3 shadow-sm">
+        <label for="message" class="form-label fw-bold">Your Message</label>
+        <textarea class="form-control border-0 border-bottom rounded-0 text-center" 
+                  id="message" name="message" rows="5" 
+                  placeholder="Write your message here..." required></textarea>
+      </div>
+    </div>
+
+    <!-- زر الإرسال -->
+   <div class="text-center">
+  <button type="submit" 
+          class="btn btn-lg px-5 text-white" 
+          style="background-color: #29abe2; border: none; border-radius: 30px;">
+    Send Message
+  </button>
 </div>
 
 
-
-
-<!-- الفورم -->
-<form action="https://formspree.io/f/xkgvqbow" method="POST" 
-      class="p-4 rounded-4 shadow-sm mx-auto text-center" 
-      style="max-width: 700px; background: #f9fcff;">
-
-  <!-- Full Name + Email -->
-  <div class="row mb-4 justify-content-center">
-    <div class="col-md-5 mb-3 mb-md-0">
-      <label for="fullName" class="form-label fw-bold">Full Name</label>
-      <input type="text" 
-             class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm text-center" 
-             id="fullName" 
-             name="fullName" 
-             placeholder="Enter your full name" 
-             required>
-    </div>
-    <div class="col-md-5">
-      <label for="emailAddress" class="form-label fw-bold">Email</label>
-      <input type="email" 
-             class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm text-center" 
-             id="emailAddress" 
-             name="emailAddress" 
-             placeholder="Enter your email" 
-             required>
-    </div>
-  </div>
-
-  <!-- Choose Your Brand -->
-  <div class="mb-4">
-    <label class="form-label fw-semibold d-block">Choose Your Brand</label>
-    <div class="d-flex flex-wrap justify-content-center gap-4">
-      <div class="form-check">
-        <input class="form-check-input" type="radio" id="restaurant" name="brand" value="Restaurant" checked>
-        <label class="form-check-label" for="restaurant">Restaurant</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" id="cafe" name="brand" value="Cafe">
-        <label class="form-check-label" for="cafe">Cafe</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" id="brands" name="brand" value="Brands">
-        <label class="form-check-label" for="brands">Brands</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" id="others" name="brand" value="Others">
-        <label class="form-check-label" for="others">Others</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- Message -->
-  <div class="mb-4">
-    <textarea class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm text-center" 
-              id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-  </div>
-
-  <!-- زر الإرسال -->
-  <div class="text-center">
-    <button type="submit" class="wavy-btn">
-      <div class="text">Send Message</div>
-      <div class="wave"></div>
-    </button>
-  </div>
-
-</form>
+  </form>
 
 </div>
 <br><br><hr>
@@ -216,6 +235,4 @@
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
 
