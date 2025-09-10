@@ -259,6 +259,7 @@
 
 
 
+
 <div class="container mt-5" id="contact">
   <div class="row align-items-center">
     
@@ -298,42 +299,61 @@
       <form action="https://formspree.io/f/xkgvqbow" method="POST">
         <div class="mb-3">
           <label for="fullName" class="form-label fw-bold" style="color:#000000;">Full Name</label>
-          <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+          <input type="text" class="form-control custom-input" id="fullName" name="fullName" placeholder="Input your Name" required>
         </div>
         
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="emailAddress" class="form-label fw-bold" style="color:#000000;">Email</label>
-            <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter your email" required>
+            <input type="email" class="form-control custom-input" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
           </div>
           <div class="col-md-6 mb-3">
             <label for="date" class="form-label fw-bold" style="color:#000000;">Date</label>
-            <input type="date" class="form-control" id="date" name="date">
+            <input type="date" class="form-control custom-input" id="date" name="date" placeholder="Select Date">
           </div>
         </div>
 
         <div class="mb-3">
           <label for="brandName" class="form-label fw-bold" style="color:#000000;">Choose Your Brand</label>
-          <input type="text" class="form-control" id="brandName" name="brandName" placeholder="Enter brand name">
+          <input type="text" class="form-control custom-input" id="brandName" name="brandName" placeholder="Enter brand name">
         </div>
         
         <div class="mb-3">
           <label for="message" class="form-label fw-bold" style="color:#000000;">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message" required></textarea>
+          <textarea class="form-control custom-input" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
         </div>
         
-        <button type="submit" class="wavy-btn">
-          <div class="text">Send Message</div>
-          <div class="wave"></div>
+        <button type="submit" class="btn fw-bold px-4 py-2" 
+          style="background-color:#29abe2; border:none; border-radius:30px; color:#fff;">
+          Send Message
         </button>
       </form>
     </div>
   </div>
 </div>
-<br>
-<br>
+
+<br><br>
 <hr>
 
+<!-- CSS -->
+<style>
+  .custom-input {
+    background-color: #29ABE20D !important; /* خلفية أزرق فاتح شفاف */
+    color: #747582 !important; /* لون النصوص */
+    border: none !important;   /* شيلت البوردر */
+    border-radius: 8px;
+  }
+
+  .custom-input::placeholder {
+    color: #747582 !important; /* لون الـ placeholder */
+    opacity: 1;
+  }
+
+  .custom-input:focus {
+    outline: none !important;
+    box-shadow: none !important; /* مفيش فريم عند الفوكس */
+  }
+</style>
 
 
 
