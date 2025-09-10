@@ -14,7 +14,8 @@
 <!-- Favicon -->
 <link rel="icon" href="Images/LogoMarkPNG.png" type="image/png" />
 
-  
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
     
   
 </head>
@@ -25,7 +26,7 @@
   <div class="container">
     <a class="navbar-brand" href="home.html">
       <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="Images/FullLogoPNG.png" alt="logo" style="width:100px; height:auto;">
+         <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
       </div>
     </a>
 
@@ -38,7 +39,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active mx-3" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link mx-3" href="home.html#services">Services</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html"><b style="color:#007bff;">About us</b></a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="plans.html">Plans</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="ContactUs.html">Contact Us</a></li>
@@ -48,18 +49,49 @@
   </div>
 </nav>
 
-<section class="hero py-5">
+
+<section class="hero py-5" 
+         style="overflow:hidden; background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
   <div class="container">
     <div class="row align-items-center">
       <!-- النص -->
       <div class="col-lg-6">
-        <h1 class="fw-bold mb-4">
-          <span style="color:black;">We amplify your brand’s voice</span> 
-          <span style="color:#007bff;"> with bold, authentic strategies that spark real connections.</span>
-        </h1>
+
+        <!-- العنوان الصغير بالبرتقالي -->
+        <p class="fw-bold mb-1" style="color:#fbb040; font-size:14px; text-transform:uppercase;">
+          <i class="bi bi-patch-check-fill me-2"></i>
+          Best Business Platform - World Record 2025
+        </p>
+        <br>
+
+        <!-- العنوان الرئيسي -->
+        <h2 class="fw-bold mb-3" style="color:#1c1c1c;">
+          About Us <span style="color:#0d6efd;">SABEQ</span>
+        </h2>
+
+        <!-- الوصف -->
+        <p class="lead text-muted mb-4">
+          We amplify your brand’s voice <span style="color:#007bff;">with bold, authentic strategies that spark real connections.</span>
+        </p>
         <p class="lead text-muted mb-4">
           At SABEQ, we don’t just create campaigns—we craft experiences that resonate, inspire, and drive measurable success. Let’s shape a story that captivates your audience and elevates your brand to new heights.
         </p>
+
+        <!-- الإحصائيات -->
+        <div class="d-flex flex-wrap gap-4">
+          <div>
+            <h4 class="fw-bold text-primary">+ 3</h4>
+            <p class="text-muted">Months</p>
+          </div>
+          <div>
+            <h4 class="fw-bold text-primary">+ 30K</h4>
+            <p class="text-muted">Views</p>
+          </div>
+          <div>
+            <h4 class="fw-bold text-primary">+ 60</h4>
+            <p class="text-muted">Clients</p>
+          </div>
+        </div>
       </div>
 
       <!-- الصورة -->
@@ -70,24 +102,40 @@
   </div>
 </section>
 
-<br>
+
+
+
+
+
+
+
+
+
+
 <hr>
-
-<section class="hero py-5">
+<section class="py-5" style="background-color:#f8f9fa;">
   <div class="container">
-    <div class="row align-items-center">
-      <!-- جهة اليسار -->
-      <div class="col-lg-6">
-        <h2 class="fw-bold mb-4" style="color:black;">
-          A service built on trust, <span style="color:#007bff;">measured by results.</span>
-        </h2>
-      </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card shadow-lg border-0 rounded-4 p-5 text-center">
+          <!-- أيقونة -->
+          <div class="mb-3">
+            <i class="bi bi-award-fill" style="font-size:2rem; color:#007bff;"></i>
+          </div>
 
-      <!-- جهة اليمين -->
-      <div class="col-lg-6">
-        <p class="lead text-muted mb-4">
-          Success is not measured by promises. It is measured by what is truly achieved on the ground. That’s why we focus on execution details and work as one team, giving every client a unique experience that strengthens their presence in the market and creates a tangible impact in sales and engagement.
-        </p>
+          <!-- العنوان -->
+          <h2 class="fw-bold mb-4" style="color:black;">
+            A service built on trust, <span style="color:#007bff;">measured by results.</span>
+          </h2>
+
+          <!-- النص -->
+          <p class="lead text-muted mb-0">
+            Success is not measured by promises. It is measured by what is truly achieved on the ground. 
+            That’s why we focus on execution details and work as one team, giving every client a unique 
+            experience that strengthens their presence in the market and creates a tangible impact in sales 
+            and engagement.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -95,65 +143,11 @@
 
 
 
-<section class="py-5">
-  <div class="container">
-    <div class="row g-4 align-items-stretch">
-      
-      <!-- Box 920+ Bloggers -->
-      <div class="col-md-5 d-flex">
-        <div class="position-relative text-white rounded w-100 d-flex flex-column justify-content-between p-4"
-              style="background: url('Images/background.png') center/cover no-repeat; border-radius: 20px; min-height: 320px; overflow:hidden;">
-          
-          <!-- الأزرق الغامق (Overlay) -->
-          <div style="position:absolute; top:0; left:0; width:100%; height:100%;
-                      background: rgba(0, 51, 102, 0.6); border-radius:20px;"></div>
-
-          <!-- المحتوى فوق الطبقة -->
-          <div class="position-relative">
-            <h1 class="fw-bold" style="font-size: 3rem; line-height: 1.2; color: #fff;">
-              920<span style="color:#ffcc00; font-size: 3rem;">+</span>
-            </h1>
-            <p class="mb-3" style="font-size: 1.1rem; color: #fff;">Bloggers</p>
-          </div>
-          
-          <!-- avatars -->
-          <div class="d-flex mt-auto position-relative">
-            <img src="Images/person(1).jpeg" class="rounded-circle border border-2 border-white" style="width:45px;height:45px;margin-right:-10px;" alt="">
-            <img src="Images/person(2).jpeg" class="rounded-circle border border-2 border-white" style="width:45px;height:45px;margin-right:-10px;" alt="">
-            <img src="Images/person(3).jpeg" class="rounded-circle border border-2 border-white" style="width:45px;height:45px;margin-right:-10px;" alt="">
-            <img src="Images/person(4).jpeg" class="rounded-circle border border-2 border-white" style="width:45px;height:45px;margin-right:-10px;" alt="">
-          </div>
-        </div>
-      </div>
-
-      <!-- Box HOW WE WORK -->
-      <div class="col-md-7 d-flex">
-        <div class="position-relative rounded overflow-hidden w-100"
-              style="min-height: 320px; border-radius: 20px;">
-          <img src="Images/workingpeople.png" class="img-fluid w-100 h-100" style="object-fit:cover;" alt="How We Work">
-          
-          <!-- overlay text -->
-          <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
-            <h2 class="fw-bold" style="font-size: 2rem;">HOW WE WORK</h2>
-          </div>
-
-          <!-- play button -->
-          <div class="position-absolute bottom-0 end-0 m-3 bg-warning rounded-circle d-flex align-items-center justify-content-center shadow" 
-                style="width:70px; height:70px;">
-            <i class="bi bi-play-fill text-white fs-2"></i>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <hr>
 <br>
 <br>
 <br>
-
 <section class="py-5">
   <div class="container">
     <div class="row">
@@ -247,54 +241,89 @@
   </div>
 </section>
 
+<!-- CSS -->
+<style>
+.accordion-button::after {
+  content: '+' !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  transform: none !important;
+  background-image: none !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: '-' !important;
+}
+</style>
 
 
 
 <div class="container mt-5" id="contact">
   <div class="row align-items-center">
+    
     <!-- صورة على الشمال -->
-    <div class="col-md-5 text-center mb-4 mb-md-0">
-      <img src="Images/Marketing.png" class="img-fluid rounded" alt="Illustration of Contact Us Section">
+    <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
+      <!-- الخلفية -->
+      <img src="Images/Group9146.png" 
+           alt="Background Shape" 
+           class="img-fluid position-absolute top-50 start-50 translate-middle" 
+           style="max-height: 500px; z-index: 1; opacity: 0.9;">
+      
+      <!-- الصورة الأصلية -->
+      <img src="Images/Marketing.png" 
+           class="img-fluid position-relative" 
+           alt="Illustration of Contact Us Section" 
+           style="max-height: 420px; z-index: 2;">
     </div>
 
     <!-- الفورم على اليمين -->
     <div class="col-md-7">
-      <h2 class="fw-bold mb-3" style="
-        font-family: 'Arial', sans-serif;
-        background: linear-gradient(90deg, #0d6efd, #29abe2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-        color: #0d6efd; /* Fallback color */
-      ">
-        Let's Collaborate Now!
+      
+      <!-- النص البرتقالي الصغير -->
+      <p class="fw-bold mb-1" style="color:#fbb040; letter-spacing:1px; font-size:15px; text-transform:uppercase;">
+        CONTACT US
+      </p>
+      <br>
+      
+      <!-- العنوان الرئيسي -->
+      <h2 class="fw-bold mb-3" style="font-family: 'Arial', sans-serif; color: #000;">
+        Let’s Collaborate Now!
       </h2>
-    
+      
+      <p class="mb-4 text-muted">
+        We’d love to hear from you! Fill out the form below and our team will get back to you soon.
+      </p>
 
       <form action="https://formspree.io/f/xkgvqbow" method="POST">
         <div class="mb-3">
-          <label for="fullName" class="form-label">Full Name</label>
+          <label for="fullName" class="form-label fw-bold" style="color:#000000;">Full Name</label>
           <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
         </div>
-        <div class="mb-3">
-          <label for="emailAddress" class="form-label">Email Address</label>
-          <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter your email" aria-describedby="emailHelp" required>
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="emailAddress" class="form-label fw-bold" style="color:#000000;">Email</label>
+            <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter your email" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="date" class="form-label fw-bold" style="color:#000000;">Date</label>
+            <input type="date" class="form-control" id="date" name="date">
+          </div>
         </div>
+
         <div class="mb-3">
-          <label for="date" class="form-label">Date</label>
-          <input type="date" class="form-control" id="date" name="date">
-        </div>
-        <div class="mb-3">
-          <label for="brandName" class="form-label">Brand Name</label>
+          <label for="brandName" class="form-label fw-bold" style="color:#000000;">Choose Your Brand</label>
           <input type="text" class="form-control" id="brandName" name="brandName" placeholder="Enter brand name">
         </div>
+        
         <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
+          <label for="message" class="form-label fw-bold" style="color:#000000;">Message</label>
           <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message" required></textarea>
         </div>
         
-      <button type="submit" class="wavy-btn"><div class ="text">Send Message</div>
+        <button type="submit" class="wavy-btn">
+          <div class="text">Send Message</div>
           <div class="wave"></div>
         </button>
       </form>
@@ -304,16 +333,24 @@
 <br>
 <br>
 <hr>
+
+
+
+
+
 <!-- Footer -->
 <footer class="pt-4" style="
-  background: linear-gradient(90deg, #0d6efd, #29abe2);
+  background-color: #282c4b;
   color: white;
 ">
   <div class="container">
+    <br>
     <div class="row align-items-center">
       <!-- جهة اليسار -->
       <div class="col-md-6 mb-3 mb-md-0">
-        <h4 class="fw-bold mb-1">  <img src="Images/LogoMarkPNG.png" alt="logo" style="width:40px; height:auto;"></h4>
+        <h4 class="fw-bold mb-1">
+          <img src="Images/LogoMarkPNG.png" alt="logo" style="width:40px; height:auto;">
+        </h4>
         <p class="mb-0">We craft marketing solutions that go beyond expectations..</p>
       </div>
 
@@ -338,7 +375,11 @@
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
     </div>
+  </div>
   <br>
+</footer>
+
+
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
