@@ -191,28 +191,34 @@
   opacity: 1;
 }
 
-/* Hover Effect */
-.service-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+/* Hover Effect لأجهزة Desktop */
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
 }
 </style>
 
-<!-- JS: يضيف كلاس visible عند ظهور الكروت -->
+<!-- JS -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".service-card");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.2 });
+window.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.service-card');
 
-    cards.forEach(card => observer.observe(card));
-  });
+  // لإظهار الحركة عند الدخول للـ viewport
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // لإيقاف المراقبة بعد الظهور
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => observer.observe(card));
+});
 </script>
+
 
 <br>
 
