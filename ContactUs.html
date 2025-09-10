@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
 
 <title>Contact - SABEQ</title>
 <meta name="description" content="Get in touch with SABEQ today. Contact us for marketing solutions, partnerships, and tailored plans to grow your business.">
@@ -23,7 +24,7 @@
   <div class="container">
     <a class="navbar-brand" href="home.html">
       <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="Images/FullLogoPNG.png" alt="logo" style="width:100px; height:auto;">
+         <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
       </div>
     </a>
 
@@ -47,20 +48,22 @@
 </nav>
 
 
-
-<section class="py-5 bg-white">
+<section class="py-5" 
+         style="background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- النص -->
       <div class="col-lg-6">
-        <p class="text-warning fw-semibold mb-2">
-          📩 Contact Us
+         <!-- العنوان الصغير بالبرتقالي -->
+        <p class="fw-bold mb-1" style="color:#fbb040; font-size:14px; text-transform:uppercase;">
+          <i class="bi bi-patch-check-fill me-2"></i>
+          Best Business Platform - World Record 2025
         </p>
-        <br>
+        <br><br>
         
         <h1 class="fw-bold mb-3">
-          <span class="text-primary border-3 border-primary pb-1">Contact</span> Us..
+          <span class="text-primary border-3 border-primary pb-1">Contact with</span> SABEQ
         </h1>
         <br>
         
@@ -79,92 +82,113 @@
   </div>
 </section>
 
-<br>
+
+
 <hr>
 
 <div class="container mt-5" id="contact">
 
   <!-- معلومات التواصل فوق -->
-  <div class="d-flex flex-wrap justify-content-center gap-4 mb-5 text-center">
-    <div class="d-flex align-items-center gap-2">
-      <span class="text-primary fs-5">📧</span>
-      <span><b>info@sabeq-sa.com</b></span>
+<div class="d-flex flex-wrap justify-content-center align-items-center mb-5 text-center gap-5">
+  <div class="d-flex align-items-center gap-2">
+    <i class="bi bi-envelope-fill text-info fs-5"></i>
+    <span><b>info@sabeq-sa.com</b></span>
+  </div>
+  <div class="d-flex align-items-center gap-2">
+    <i class="bi bi-telephone-fill text-info fs-5"></i>
+    <span><b>0537993036</b></span>
+  </div>
+</div>
+
+
+
+
+<!-- الفورم -->
+<form action="https://formspree.io/f/xkgvqbow" method="POST" 
+      class="p-4 rounded-4 shadow-sm mx-auto text-center" 
+      style="max-width: 700px; background: #f9fcff;">
+
+  <!-- Full Name + Email -->
+  <div class="row mb-4 justify-content-center">
+    <div class="col-md-5 mb-3 mb-md-0">
+      <label for="fullName" class="form-label fw-bold">Full Name</label>
+      <input type="text" 
+             class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm text-center" 
+             id="fullName" 
+             name="fullName" 
+             placeholder="Enter your full name" 
+             required>
     </div>
-    <div class="d-flex align-items-center gap-2">
-      <span class="text-primary fs-5">📞</span>
-      <span><b>0537993036 </b></span>
+    <div class="col-md-5">
+      <label for="emailAddress" class="form-label fw-bold">Email</label>
+      <input type="email" 
+             class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm text-center" 
+             id="emailAddress" 
+             name="emailAddress" 
+             placeholder="Enter your email" 
+             required>
     </div>
-    
   </div>
 
-  <!-- الفورم -->
-  <form action="https://formspree.io/f/xkgvqbow" method="POST" 
-        class="p-4 rounded-4 shadow-sm mx-auto" 
-        style="max-width: 700px; background: #f9fcff;">
-
-    <!-- Full Name + Email -->
-    <div class="row mb-4">
-      <div class="col-md-6 mb-3 mb-md-0">
-        <input type="text" class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm" 
-                id="fullName" name="fullName" placeholder="Full Name" required>
+  <!-- Choose Your Brand -->
+  <div class="mb-4">
+    <label class="form-label fw-semibold d-block">Choose Your Brand</label>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="restaurant" name="brand" value="Restaurant" checked>
+        <label class="form-check-label" for="restaurant">Restaurant</label>
       </div>
-      <div class="col-md-6">
-        <input type="email" class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm" 
-                id="emailAddress" name="emailAddress" placeholder="Email" required>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="cafe" name="brand" value="Cafe">
+        <label class="form-check-label" for="cafe">Cafe</label>
       </div>
-    </div>
-
-    <!-- Choose Your Brand -->
-    <div class="mb-4">
-      <label class="form-label fw-semibold">Choose Your Brand</label>
-      <div class="d-flex flex-wrap gap-4">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="resturant" name="brand[]" value="Resturant" checked>
-          <label class="form-check-label" for="resturant">Resturant</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="cafe" name="brand[]" value="Cafe">
-          <label class="form-check-label" for="cafe">Cafe</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="brands" name="brand[]" value="Brands">
-          <label class="form-check-label" for="brands">Brands</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="others" name="brand[]" value="Others">
-          <label class="form-check-label" for="others">Others</label>
-        </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="brands" name="brand" value="Brands">
+        <label class="form-check-label" for="brands">Brands</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="others" name="brand" value="Others">
+        <label class="form-check-label" for="others">Others</label>
       </div>
     </div>
+  </div>
 
-    <!-- Message -->
-    <div class="mb-4">
-      <textarea class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm" 
-                id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-    </div>
+  <!-- Message -->
+  <div class="mb-4">
+    <textarea class="form-control form-control-lg border-0 border-bottom rounded-0 shadow-sm text-center" 
+              id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+  </div>
 
-    <!-- زر الإرسال -->
-    <div class="text-center">
-      <button type="submit" class="wavy-btn"><div class ="text">Send Message</div>
-          <div class="wave"></div>
-        </button>
-    </div>
+  <!-- زر الإرسال -->
+  <div class="text-center">
+    <button type="submit" class="wavy-btn">
+      <div class="text">Send Message</div>
+      <div class="wave"></div>
+    </button>
+  </div>
 
-  </form>
+</form>
+
 </div>
 <br><br><hr>
+
+
+
 <!-- Footer -->
 <footer class="pt-4" style="
-  background: linear-gradient(90deg, #0d6efd, #29abe2);
+  background-color: #282c4b;
   color: white;
 ">
   <div class="container">
     <div class="row align-items-center">
       <!-- جهة اليسار -->
       <div class="col-md-6 mb-3 mb-md-0">
-        <h4 class="fw-bold mb-1">  <img src="Images/LogoMarkPNG.png" alt="logo" style="width:40px; height:auto;"></h4>
+        <h4 class="fw-bold mb-1">
+          <img src="Images/LogoMarkPNG.png" alt="logo" style="width:40px; height:auto;">
+        </h4>
         <p class="mb-0">We craft marketing solutions that go beyond expectations..</p>
       </div>
+
       <!-- جهة اليمين -->
       <div class="col-md-6 text-md-end">
         <p class="mb-1">
@@ -186,10 +210,12 @@
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
     </div>
-
+  </div>
   <br>
-
+</footer>
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
 
