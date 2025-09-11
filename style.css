@@ -110,33 +110,7 @@ body {
 .wavy-btn:hover .wave { top: 50%; }
 .wavy-btn:hover { box-shadow: 6px 6px 0 #fff; }
 
-/* ======= Services Section ======= */
-#services {
-  background: linear-gradient(to bottom, #f9f9f9, #eef6ff);
-  margin-top: 4rem;
-}
 
-#services .card {
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#services .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-#services .card .card-body {
-  padding: 2rem 1.5rem;
-}
-#services .card .bi {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #f0f4ff;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,.12));
-}
 
 /* ======= Highlight Cards ======= */
 .highlight-card {
@@ -257,15 +231,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
-.btn-custom {
-  background-color: #29ABE2; /* الأزرق */
-  color: #fff;
-  border-radius: 50px;
-  padding: 20px 60px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  font-size: 18px;
-}
+
 
 .btn-custom:hover {
   background-color: #1e8bb8; /* أغمق شوية عند الـ hover */
@@ -292,4 +258,28 @@ body {
     border-radius: 20px;
     padding: 60px 30px; 
  }
+.btn-get-started {
+  width: 210px;
+  height: 68px;
+  border-radius: 192px;
+  background: #29ABE2;
+  border: 2px solid #FFFFFFCC;
+  box-shadow: 0px 30px 50px 0px #29ABE226;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Hover effect */
+.btn-get-started:hover {
+  background: #1F8DBF; /* أغمق سنة */
+  transform: translateY(-4px); /* يطلع لفوق خفيف */
+  box-shadow: 0px 35px 55px 0px #29ABE240; /* شادو أقوى */
+}
+
+
+
 
