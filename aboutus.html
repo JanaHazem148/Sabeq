@@ -49,70 +49,171 @@
   </div>
 </nav>
 
-
 <section class="hero py-5" 
          style="overflow:hidden; background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
   <div class="container">
     <div class="row align-items-center">
-      <!-- النص -->
-      <div class="col-lg-6">
 
+      <!-- النص -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
         <!-- العنوان الصغير بالبرتقالي -->
-        <p class="fw-bold mb-1" style="color:#fbb040; font-size:14px; text-transform:uppercase;">
+        <p class="best-platform">
           <i class="bi bi-patch-check-fill me-2"></i>
           Best Business Platform - World Record 2025
         </p>
-        <br>
 
         <!-- العنوان الرئيسي -->
-        <h2 class="fw-bold mb-3" style="color:#1c1c1c;">
-          About Us <span style="color:#0d6efd;">SABEQ</span>
+        <h2 class="about-title mb-3">
+          About Us <span class="highlight " style="color: #29ABE2;">SABEQ</span>
         </h2>
 
         <!-- الوصف -->
-        <p class="lead text-muted mb-4">
-          We amplify your brand’s voice <span style="color:#007bff;">with bold, authentic strategies that spark real connections.</span>
+        <p class="about-desc mb-4">
+          We amplify your brand’s voice <span class="highlight"  style="color: #29ABE2;">with bold, authentic strategies that spark real connections.</span>
         </p>
-        <p class="lead text-muted mb-4">
+        <p class="about-desc mb-4">
           At SABEQ, we don’t just create campaigns—we craft experiences that resonate, inspire, and drive measurable success. Let’s shape a story that captivates your audience and elevates your brand to new heights.
         </p>
 
         <!-- الإحصائيات -->
-        <div class="d-flex flex-wrap gap-4">
+        <div class="d-flex flex-wrap gap-5 stats">
           <div>
-            <h4 class="fw-bold text-primary">+ 3</h4>
-            <p class="text-muted">Months</p>
+            <h4 class="counter" data-target="3"><span class="plus">+</span>0</h4>
+            <p class="counter-label">Months</p>
           </div>
           <div>
-            <h4 class="fw-bold text-primary">+ 30K</h4>
-            <p class="text-muted">Views</p>
+            <h4 class="counter" data-target="30" data-suffix="K"><span class="plus">+</span>0K</h4>
+            <p class="counter-label">Views</p>
           </div>
           <div>
-            <h4 class="fw-bold text-primary">+ 60</h4>
-            <p class="text-muted">Clients</p>
+            <h4 class="counter" data-target="60"><span class="plus">+</span>0</h4>
+            <p class="counter-label">Clients</p>
           </div>
         </div>
       </div>
 
       <!-- الصورة -->
       <div class="col-lg-6 text-center">
-        <img src="Images/aboutus.png" class="img-fluid rounded" alt="Hero Image">
+        <img src="Images/aboutus.png" 
+             class="img-fluid about-img" 
+             alt="Hero Image">
       </div>
     </div>
   </div>
 </section>
 
+<!-- CSS -->
+<style>
+  .best-platform {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #FAAF43;
+    margin-bottom: 1rem;
+  }
 
+  .about-title {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 80px;
+    letter-spacing: 2%;
+    color: #1c1c1c;
+  }
 
+  .about-title .highlight {
+    color: #0d6efd;
+  }
 
+  .about-desc {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: #747582;
+  }
 
+  .about-desc .highlight {
+    color: #007bff;
+  }
 
+  .counter {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-transform: capitalize;
+    color: #092857;
+  }
 
+  .counter .plus {
+    color: #29ABE2;
+  }
 
+  .counter-label {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-transform: capitalize;
+    color: #092857;
+    margin-top: 5px;
+  }
 
+  .stats div {
+    min-width: 100px;
+  }
 
+  .about-img {
+    width: 100%;      /* تاخد العرض المتاح */
+    max-width: 528px; /* أقصى عرض */
+    height: auto;     /* عشان الريسبونسف */
+    border-radius: 10px;
+    margin: auto;
+  }
+</style>
 
-<hr>
+<!-- JavaScript -->
+<script>
+  function startCounters() {
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const suffix = counter.getAttribute("data-suffix") || "";
+      let count = 0;
+      const increment = target / 100;
+
+      const updateCounter = () => {
+        if (count < target) {
+          count += increment;
+          counter.innerHTML = `<span class="plus">+</span>${Math.floor(count)}${suffix}`;
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerHTML = `<span class="plus">+</span>${target}${suffix}`;
+        }
+      };
+
+      updateCounter();
+    });
+  }
+
+  startCounters();
+
+  setInterval(() => {
+    document.querySelectorAll(".counter").forEach(c => {
+      const suffix = c.getAttribute("data-suffix") || "";
+      c.innerHTML = `<span class="plus">+</span>0${suffix}`;
+    });
+    startCounters();
+  }, 5000);
+</script>
+
 <section class="py-5" style="background-color:#f8f9fa;">
   <div class="container">
     <div class="row justify-content-center">
@@ -125,7 +226,7 @@
 
           <!-- العنوان -->
           <h2 class="fw-bold mb-4" style="color:black;">
-            A service built on trust, <span style="color:#007bff;">measured by results.</span>
+            A service built on trust, <span  style="color: #29ABE2;">measured by results.</span>
           </h2>
 
           <!-- النص -->
@@ -147,115 +248,204 @@
 <hr>
 <br>
 <br>
-<br>
+
+
+
+
+
+
 <section class="py-5">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-start">
       
       <!-- العنوان والنص -->
-      <div class="col-md-4">
-        <h2 class="fw-bold">SABEQ FAQs</h2>
-        <p class="text-muted">
-          As a leading digital marketing agency, we are dedicated to providing comprehensive educational 
-          resources and answering frequently asked questions to help our clients.
-        </p>
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <div class="faq-left-box">
+          <h2 class="faq-title">SABEQ FAQs</h2>
+          <p class="faq-subtitle">
+            As a leading digital marketing agency, we are dedicated to providing comprehensive educational 
+            resources and answering frequently asked questions to help our clients.
+          </p>
+        </div>
       </div>
 
       <!-- الأسئلة -->
-      <div class="col-md-8">
-        <div class="accordion" id="faqAccordion">
-
+      <div class="col-lg-8 col-md-12">
+        <div class="faq-box">
+          
           <!-- Q1 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq1">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                      data-bs-target="#answer1" aria-expanded="true" aria-controls="answer1">
-                When do campaign results start to appear after launch?
-              </button>
-            </h2>
-            <div id="answer1" class="accordion-collapse collapse show" 
-                  aria-labelledby="faq1" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Results usually begin to appear after the first week.
-              </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              When do campaign results start to appear after launch?
+            </button>
+            <div class="faq-answer">
+              Results usually begin to appear after the first week.
             </div>
           </div>
 
           <!-- Q2 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                      data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">
-                Is the list of bloggers shared with the client before the campaign?
-              </button>
-            </h2>
-            <div id="answer2" class="accordion-collapse collapse" 
-                  aria-labelledby="faq2" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                For hospitality bloggers and those paid SAR 300, only the invitation codes are shared 
-                for attending the activity. <br><br>
-                For bloggers paid SAR 1,000 or more, their details are shared with the client 
-                after signing the official agreement.
-              </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Is the list of bloggers shared with the client before the campaign?
+            </button>
+            <div class="faq-answer">
+              For hospitality bloggers and those paid SAR 300, only the invitation codes are shared 
+              for attending the activity. <br><br>
+              For bloggers paid SAR 1,000 or more, their details are shared with the client 
+              after signing the official agreement.
             </div>
           </div>
 
           <!-- Q3 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                      data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">
-                What is the process for selecting the right blogger for each campaign?
-              </button>
-            </h2>
-            <div id="answer3" class="accordion-collapse collapse" 
-                  aria-labelledby="faq3" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Bloggers are chosen based on their relevance to the target audience, the nature of the 
-                activity, their engagement level, and the quality of their content.
-              </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is the process for selecting the right blogger for each campaign?
+            </button>
+            <div class="faq-answer">
+              Bloggers are chosen based on their relevance to the target audience, the nature of the 
+              activity, their engagement level, and the quality of their content.
             </div>
           </div>
 
           <!-- Q4 -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="faq4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                      data-bs-target="#answer4" aria-expanded="false" aria-controls="answer4">
-                What makes SABEQ different from other agencies?
-              </button>
-            </h2>
-            <div id="answer4" class="accordion-collapse collapse" 
-                  aria-labelledby="faq4" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Speed of execution, attention to detail, delivering high quality at the best cost, 
-                and proven expertise through more than 200 successful projects.
-              </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What makes SABEQ different from other agencies?
+            </button>
+            <div class="faq-answer">
+              Speed of execution, attention to detail, delivering high quality at the best cost, 
+              and proven expertise through more than 200 successful projects.
             </div>
           </div>
 
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- CSS -->
 <style>
-.accordion-button::after {
-  content: '+' !important;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000;
-  transform: none !important;
-  background-image: none !important;
-}
+  /* البوكس اللي فيه العنوان والنص */
+  .faq-left-box {
+    max-width: 531px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* مسافة بين العنوان والجملة */
+  }
 
-.accordion-button:not(.collapsed)::after {
-  content: '-' !important;
-}
+  @media (min-width: 992px) {
+    .faq-left-box {
+      margin-right: 40px; /* مسافة بين العمود الشمال واليمين */
+    }
+  }
+
+  .faq-title {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    letter-spacing: -3%;
+    color: #010205;
+  }
+
+  .faq-subtitle {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0;
+    color: #878C91;
+  }
+
+  .faq-box {
+    border-top: 1px solid #ddd;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: -3%;
+    color: #010205;
+    padding: 20px 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* علامة + و - */
+  .faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .faq-question.active::after {
+    content: '-';
+  }
+
+  .faq-answer {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    color: #878C91;
+    padding: 0 0 20px;
+    display: none;
+  }
+
+  .faq-answer.show {
+    display: block;
+  }
 </style>
+
+<!-- JavaScript -->
+<script>
+  const questions = document.querySelectorAll(".faq-question");
+
+  questions.forEach(q => {
+    q.addEventListener("click", () => {
+      // close all
+      questions.forEach(item => {
+        item.classList.remove("active");
+        item.nextElementSibling.classList.remove("show");
+      });
+
+      // open current
+      q.classList.add("active");
+      q.nextElementSibling.classList.add("show");
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -265,13 +455,10 @@
     
     <!-- صورة على الشمال -->
     <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
-      <!-- الخلفية -->
       <img src="Images/Group9146.png" 
            alt="Background Shape" 
            class="img-fluid position-absolute top-50 start-50 translate-middle" 
            style="max-height: 500px; z-index: 1; opacity: 0.9;">
-      
-      <!-- الصورة الأصلية -->
       <img src="Images/Marketing.png" 
            class="img-fluid position-relative" 
            alt="Illustration of Contact Us Section" 
@@ -282,51 +469,97 @@
     <div class="col-md-7">
       
       <!-- النص البرتقالي الصغير -->
-      <p class="fw-bold mb-1" style="color:#fbb040; letter-spacing:1px; font-size:15px; text-transform:uppercase;">
+      <p class="contact-small">
         CONTACT US
       </p>
       <br>
       
       <!-- العنوان الرئيسي -->
-      <h2 class="fw-bold mb-3" style="font-family: 'Arial', sans-serif; color: #000;">
+      <h2 class="contact-title">
         Let’s Collaborate Now!
       </h2>
       
-      <p class="mb-4 text-muted">
+      <!-- وصف -->
+      <p class="contact-desc mb-4">
         We’d love to hear from you! Fill out the form below and our team will get back to you soon.
       </p>
 
       <form action="https://formspree.io/f/xkgvqbow" method="POST">
+
+        <!-- Full Name -->
         <div class="mb-3">
-          <label for="fullName" class="form-label fw-bold" style="color:#000000;">Full Name</label>
-          <input type="text" class="form-control custom-input" id="fullName" name="fullName" placeholder="Input your Name" required>
+          <label for="fullName" class="form-label label-text">Full Name</label>
+          <input type="text" class="form-control input-long" id="fullName" name="fullName" placeholder="Input your Name" required>
         </div>
         
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="emailAddress" class="form-label fw-bold" style="color:#000000;">Email</label>
-            <input type="email" class="form-control custom-input" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
+        <!-- Email + Date -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="emailAddress" class="form-label label-text">Email</label>
+            <input type="email" class="form-control input-half" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="date" class="form-label fw-bold" style="color:#000000;">Date</label>
-            <input type="date" class="form-control custom-input" id="date" name="date" placeholder="Select Date">
+
+          <div class="col-md-6">
+            <label for="date" class="form-label label-text">Date</label>
+            <div class="position-relative">
+              <input type="date" class="form-control input-half ps-5" id="date" name="date">
+              <span class="position-absolute top-50 start-0 translate-middle-y ps-2">
+                <img src="Images/Calendar.png" alt="calendar" style="width:20px; height:20px;">
+              </span>
+            </div>
           </div>
         </div>
 
+        <!-- Brand -->
         <div class="mb-3">
-          <label for="brandName" class="form-label fw-bold" style="color:#000000;">Choose Your Brand</label>
-          <input type="text" class="form-control custom-input" id="brandName" name="brandName" placeholder="Enter brand name">
+          <label for="brandName" class="form-label label-text">Choose Your Brand</label>
+          <input type="text" class="form-control input-long" id="brandName" name="brandName" placeholder="Enter brand name">
         </div>
         
+        <!-- Message -->
         <div class="mb-3">
-          <label for="message" class="form-label fw-bold" style="color:#000000;">Message</label>
-          <textarea class="form-control custom-input" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
+          <label for="message" class="form-label label-text">Message</label>
+          <textarea class="form-control input-long ps-3" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
         </div>
-        
-        <button type="submit" class="btn fw-bold px-4 py-2" 
-          style="background-color:#29abe2; border:none; border-radius:30px; color:#fff;">
-          Send Message
-        </button>
+        <!-- Button -->
+<button type="submit" class="btn submit-btn">
+  <span class="btn-text">Send Message</span>
+</button>
+
+<style>
+  .submit-btn {
+    width: 210px;
+    height: 68px;
+    border-radius: 192px;
+    background: #29ABE2;
+    border: 2px solid #FFFFFFCC; /* أبيض شفاف */
+    box-shadow: 0px 30px 50px 0px #29ABE226;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .submit-btn:hover {
+    background: #1f94c7; /* لون أغمق شوية عند الهوفر */
+  }
+
+  .btn-text {
+    width: 127px;
+    height: 21px;
+
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #FFFFFF;
+    text-align: center;
+  }
+</style>
+
       </form>
     </div>
   </div>
@@ -337,23 +570,112 @@
 
 <!-- CSS -->
 <style>
-  .custom-input {
-    background-color: #29ABE20D !important; /* خلفية أزرق فاتح شفاف */
-    color: #747582 !important; /* لون النصوص */
-    border: none !important;   /* شيلت البوردر */
-    border-radius: 8px;
+  /* النص البرتقالي الصغير */
+  .contact-small {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FAAF43;
+    text-transform: uppercase;
   }
 
-  .custom-input::placeholder {
-    color: #747582 !important; /* لون الـ placeholder */
+  /* العنوان الرئيسي */
+  .contact-title {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: 2%;
+    color: #282C4B;
+  }
+
+  /* الوصف */
+  .contact-desc {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    color: #14142B;
+  }
+
+  /* اللابلز فوق كل بوكس */
+  .label-text {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: #14183E;
+  }
+
+  /* البوكسات */
+  .input-long,
+  .input-half {
+    width: 100%;
+    height: 58px;
+    background-color: #29ABE20D;
+    border: none;
+    border-radius: 10px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #747582;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .input-long::placeholder,
+  .input-half::placeholder {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #747582;
     opacity: 1;
   }
 
-  .custom-input:focus {
-    outline: none !important;
-    box-shadow: none !important; /* مفيش فريم عند الفوكس */
+  textarea.input-long {
+    height: auto;
+    padding-top: 10px;
+  }
+
+  /* شيل أيقونة الـ default من input date */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* زرار */
+  .submit-btn {
+    background-color: #29abe2;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
   }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
