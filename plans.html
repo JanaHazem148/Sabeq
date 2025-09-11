@@ -47,42 +47,70 @@
   </div>
 </nav>
 
-
 <!-- القسم الأول -->
 <section class="py-5" 
-         style="background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
+         style="background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%); font-family: Ubuntu, sans-serif;">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- النص -->
-      <div class="col-lg-6">
+      <div class="col-lg-6 mb-4 mb-lg-0">
         
-        <p class="text-warning fw-semibold mb-2">
+        <!-- العنوان الصغير -->
+        <p class="platform-title mb-4">
           <i class="bi bi-patch-check-fill me-2"></i>
-           Best Business Platform - World Record 2025
+          Best Business Platform - World Record 2025
         </p>
-        <br><br>
         
-        <h1 class="fw-bold mb-3">
-          <span class="text-primary border-3 border-primary pb-1">SABEQ</span> Plans..
+        <!-- العنوان الأساسي -->
+        <h1 class="fw-bold mb-4">
+ <span style="color: #29abe2;">
+  SABEQ
+</span> Plans..
+
         </h1>
-        <br>
         
-        <p class="lead text-muted">
-          We understand that every business has its own goals, which is why we’ve created flexible packages that meet your marketing needs whether you’re just starting out or aiming for growth and leadership.
+        <!-- النص الفرعي -->
+        <p class="platform-subtitle">
+          We understand that every business has its own goals, which is why we’ve created flexible packages 
+          that meet your marketing needs whether you’re just starting out or aiming for growth and leadership.
         </p>
       </div>
 
       <!-- الصورة -->
       <div class="col-lg-6 text-center">
-        <img src="Images/premium.png" class="img-fluid" alt="SABEQ Plans">
+        <img src="Images/premium.png" class="img-fluid platform-img" alt="SABEQ Plans">
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- CSS -->
+<style>
+  .platform-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #FAAF43;
+  }
 
+  .platform-subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: #747582;
+  }
+
+  .platform-img {
+    width: 526px;
+    height: 560px;
+    max-width: 100%; /* ريسبونسف */
+    height: auto;    /* يحافظ على النسبة */
+  }
+</style>
 
 
 
@@ -261,15 +289,16 @@
 </script>
 
 
+
 <!-- ✅ Packages Section -->
-<section id="plan" 
-         style="background: url('Images/Pricingbg.png') no-repeat center center/cover; 
-                padding: 80px 0;">
+<section id="plan" style="padding: 80px 0; font-family: Ubuntu, sans-serif;">
 
   <div class="container">
+
+    <!-- العناوين -->
     <div class="text-center mb-5">
-      <h2 class="display-5 fw-bold text-primary">Our Package Prices..</h2>
-      <p class="lead text-muted" style="max-width: 700px; margin: auto;">
+      <h2 class="pricing-title">Our Pricing Plans</h2>
+      <p class="pricing-subtitle" style="max-width: 700px; margin: auto;">
         Packages tailored to your needs whether you’re just starting your project or a major brand seeking expansion :
       </p>
     </div>
@@ -278,33 +307,29 @@
 
       <!-- Trial -->
       <div class="col-md-6 col-lg-3 d-flex flex-column">
-        <!-- Top card -->
         <div class="card shadow border-0 rounded-3 text-center mb-3">
           <div class="card-body py-5">
+            <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Trial Package 🌟</small>
             <h2 class="fw-bold text-primary mb-3">SAR 3,000</h2>
-            <small class="text-uppercase fw-semibold text-secondary d-block mb-3">Trial Package 🌟</small>
-            <button class="btn btn-primary btn-sm w-100 pay-now-btn rounded-pill" data-package="trial">Pay Now</button>
+            <div class="text-center">
+              <button class="pay-now-btn" data-package="trial">
+                Pay Now <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <!-- Bottom -->
         <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled small text-muted mb-0">
+          <ul class="list-unstyled feature-list mb-0">
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               30 Bloggers (hospitality only)
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               Coordination Fee: Included
             </li>
             <li class="d-flex align-items-center">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               Hospitality: All 30 bloggers covered
             </li>
           </ul>
@@ -315,29 +340,27 @@
       <div class="col-md-6 col-lg-3 d-flex flex-column">
         <div class="card shadow border-0 rounded-3 text-center mb-3">
           <div class="card-body py-5">
+            <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Silver Package 🎖</small>
             <h2 class="fw-bold text-primary mb-3">SAR 6,000</h2>
-            <small class="text-uppercase fw-semibold text-secondary d-block mb-3">Silver Package 🎖</small>
-            <button class="btn btn-primary btn-sm w-100 pay-now-btn rounded-pill" data-package="silver">Pay Now</button>
+            <div class="text-center">
+              <button class="pay-now-btn" data-package="silver">
+                Pay Now <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
         <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled small text-muted mb-0">
+          <ul class="list-unstyled feature-list mb-0">
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               30 Bloggers
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               20 Hospitality + 10 Paid (SAR 300 each)
             </li>
             <li class="d-flex align-items-center">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               Coordination Fee: SAR 3,000
             </li>
           </ul>
@@ -348,41 +371,35 @@
       <div class="col-md-6 col-lg-3 d-flex flex-column">
         <div class="card shadow border-0 rounded-3 text-center mb-3">
           <div class="card-body py-5">
+            <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Gold Package 🥇</small>
             <h2 class="fw-bold text-primary mb-3">SAR 11,000</h2>
-            <small class="text-uppercase fw-semibold text-secondary d-block mb-3">Gold Package 🥇</small>
-            <button class="btn btn-primary btn-sm w-100 pay-now-btn rounded-pill" data-package="gold">Pay Now</button>
+            <div class="text-center">
+              <button class="pay-now-btn" data-package="gold">
+                Pay Now <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
         <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled small text-muted mb-0">
+          <ul class="list-unstyled feature-list mb-0">
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               31 Bloggers
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               15 Hospitality + 15 Paid (SAR 300 each)
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               1 Strong Influencer (worth SAR 2,500)
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               Coordination Fee: SAR 3,500
             </li>
             <li class="d-flex align-items-center">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               Targeted TikTok Promotion (worth SAR 500)
             </li>
           </ul>
@@ -393,43 +410,37 @@
       <div class="col-md-6 col-lg-3 d-flex flex-column">
         <div class="card shadow border-0 rounded-3 text-center mb-3 text-white" style="background: linear-gradient(105deg, #29ABE2, #FAAF43);">
           <div class="card-body py-5">
-            <h2 class="fw-bold mb-3">SAR 16,000</h2>
-            <small class="text-uppercase fw-semibold d-block mb-3 d-flex justify-content-center align-items-center gap-2">
+            <small class="text-uppercase fw-semibold d-block mb-2 d-flex justify-content-center align-items-center gap-2">
               <i class="bi bi-gem"></i> Diamond Package 💎
             </small>
-            <button class="btn btn-primary btn-sm w-100 pay-now-btn rounded-pill" data-package="diamond">Pay Now</button>
+            <h2 class="fw-bold mb-3">SAR 16,000</h2>
+            <div class="text-center">
+              <button class="pay-now-btn" data-package="diamond">
+                Pay Now <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
         <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled small text-muted mb-0">
+          <ul class="list-unstyled feature-list mb-0">
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               37 Bloggers
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               15 Hospitality + 20 Paid (SAR 300 each)
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               2 Strong Influencers (worth SAR 2,500 each)
             </li>
             <li class="d-flex align-items-center mb-2">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               Coordination Fee: SAR 4,500
             </li>
             <li class="d-flex align-items-center">
-              <span class="bg-primary rounded-circle d-flex justify-content-center align-items-center me-2" style="width:22px; height:22px;">
-                <i class="bi bi-check-lg text-white small"></i>
-              </span>
+              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
               Targeted TikTok Promotion (worth SAR 500)
             </li>
           </ul>
@@ -437,6 +448,8 @@
       </div>
 
     </div>
+
+    <hr>
 
     <!-- ✅ زرار كاستم بلان -->
     <div class="text-center mt-5">
@@ -447,6 +460,77 @@
     </div>
   </div>
 </section>
+
+<!-- CSS -->
+<style>
+  .pricing-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: 2%;
+    text-align: center;
+    color: #282C4B;
+  }
+
+  .pricing-subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #747582;
+  }
+
+  /* ✅ زرار موحد */
+  .pay-now-btn {
+    width: 216px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background-color: #29ABE2;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 192px;
+    border: 2px solid #FFFFFFCC;
+
+    padding: 8px 24px;
+
+    box-shadow: 0px 30px 50px 0px #29ABE226;
+    opacity: 1;
+
+    transition: all 0.3s ease;
+  }
+
+  .pay-now-btn:hover {
+    background-color: #218bbd;
+    box-shadow: 0px 20px 40px 0px #29ABE240;
+  }
+
+  .pay-now-btn i {
+    font-size: 16px;
+  }
+
+  /* ✅ تكبير الأيقونة */
+  .check-icon {
+    font-size: 20px; /* أكبر سنة */
+  }
+
+  /* ✅ استايل النصوص تحت الكروت */
+  .feature-list li {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px; /* مناسب للقراءة */
+    line-height: 115%;
+    letter-spacing: 0;
+    color: #6F6C8F;
+  }
+</style>
+
 
 
 
