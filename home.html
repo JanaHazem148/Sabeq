@@ -48,6 +48,12 @@
   </div>
 </nav>
 
+
+
+
+
+
+
 <!-- Hero Section -->
 <section class="hero py-5 position-relative" 
          style="overflow:hidden; background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
@@ -57,25 +63,26 @@
       <!-- العمود الشمال -->
       <div class="col-lg-6">
         <!-- الرسالة -->
-        <div class="d-flex align-items-center " style="color:#fbb040;">
+        <div class="d-flex align-items-center mb-3" 
+             style="color:#FAAF43; font-family:Ubuntu, sans-serif; font-weight:400; font-size:16px; line-height:100%;">
           <i class="bi bi-patch-check-fill me-2"></i>
           Best Business Platform - World Record 2025
         </div>
-        <br><br>
 
         <!-- العنوان -->
-        <h1 class="fw-bold mb-4 mt-3">
+        <h1 style="font-family:Ubuntu, sans-serif; font-weight:700; font-size:50px; line-height:80px; letter-spacing:0.02em;">
           <span style="color:black;">We focus on showcasing the strengths of your business</span> 
           <span style="color:#29ABE2;"> in a genuine, authentic way that brings you closer to your audience.</span>
         </h1>
 
-        <p class="lead text-muted mb-4">
+        <!-- الفقرة -->
+        <p style="font-family:Ubuntu, sans-serif; font-weight:400; font-size:20px; line-height:36px; color:#747582;">
           Let us help you build a brand that truly connects with people and grows stronger every day.
         </p>
 
         <!-- زرار Get Started -->
         <a href="plans.html">
-          <button class="btn btn-custom">Get Started</button>
+          <button class="btn-get-started">Get Started</button>
         </a>
       </div>
 
@@ -86,14 +93,8 @@
         <img src="Images/MaskGroup(1).png" 
              alt="blue-bg" 
              class="position-absolute" 
-             style="
-               bottom: 0; 
-               left: 50%; 
-               transform: translateX(-50%); 
-               width: 90%; 
-               z-index: 1;
-               filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(1225%) hue-rotate(171deg) brightness(94%) contrast(96%);
-             ">
+             style="bottom: 0; left: 50%; transform: translateX(-50%); width: 90%; z-index: 1;
+                    filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(1225%) hue-rotate(171deg) brightness(94%) contrast(96%);">
 
         <!-- البرتقالي -->
         <img src="Images/MaskGroup(2).png" 
@@ -112,64 +113,68 @@
              class="img-fluid position-relative" 
              alt="Hero Image" 
              style="z-index: 5;">
-
       </div>
+
     </div>
   </div>
 </section>
 
-
-
-
-
-
-<!-- Services Section -->
-<section id="services" class="py-5">
+<!-- ======= Services Section ======= -->
+<section id="services" style="background-color: #ffffff; padding: 80px 0;">
   <div class="container">
     <div class="row align-items-start g-4">
-      
+
       <!-- العمود الأول: العنوان والوصف -->
       <div class="col-lg-4 text-lg-start text-center">
-        <small class="text-uppercase text-warning fw-bold">Services</small>
-        <h2 class="fw-bold mb-3">Our Capabilities</h2>
-        <p class="text-muted" style="max-width: 350px;">
-          We don’t just provide services; we create a complete ecosystem of expertise and strategic vision
-          to strengthen your brand’s position and open growth horizons beyond expectations.
-        </p>
+        <div class="service-header">
+          <small class="text-uppercase fw-bold" 
+                 style="font-family: Ubuntu; font-weight: 400; font-size: 16px; line-height: 100%; letter-spacing: 0%; color: #F17216;">
+            Services
+          </small>
+          <h2 class="service-main-title" 
+              style="font-family: Ubuntu; font-weight: 700; font-size: 36px; line-height: 53px; color: #282C4B; margin-top: 10px;">
+            Our Capabilities
+          </h2>
+          <p class="service-description" 
+             style="font-family: Ubuntu; font-weight: 400; font-size: 20px; line-height: 32px; color: #747582; max-width: 350px; margin: 20px 0 0 0;">
+            We don’t just provide services; we create a complete ecosystem of expertise and strategic vision
+            to strengthen your brand’s position and open growth horizons beyond expectations.
+          </p>
+        </div>
       </div>
 
-      <!-- العمود الثاني: الكروت -->
+      <!-- العمود الثاني: كروت الخدمات -->
       <div class="col-lg-8">
-        <div class="row g-4">
-          
+        <div class="row g-4 justify-content-center">
+
           <!-- Service 1 -->
-          <div class="col-md-4">
-            <div class="service-card p-4 h-100 text-center shadow-sm rounded">
-              <i class="bi bi-people fs-1 text-primary mb-3"></i>
-              <h5 class="fw-bold">Service 1</h5>
-              <p class="text-muted small">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <img src="Images/shop.png" alt="Service 1" class="service-img">
+              <h5 class="service-title">Service 1</h5>
+              <p class="service-text">
                 We connect your brand with its audience through top influencers carefully selected for maximum impact.
               </p>
             </div>
           </div>
 
           <!-- Service 2 -->
-          <div class="col-md-4">
-            <div class="service-card p-4 h-100 text-center shadow-sm rounded">
-              <i class="bi bi-lightbulb fs-1 text-success mb-3"></i>
-              <h5 class="fw-bold">Service 2</h5>
-              <p class="text-muted small">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <img src="Images/cards.png" alt="Service 2" class="service-img">
+              <h5 class="service-title">Service 2</h5>
+              <p class="service-text">
                 Innovative solutions that reflect your brand’s identity and enrich its presence in the market.
               </p>
             </div>
           </div>
 
           <!-- Service 3 -->
-          <div class="col-md-4">
-            <div class="service-card p-4 h-100 text-center shadow-sm rounded">
-              <i class="bi bi-graph-up-arrow fs-1 text-danger mb-3"></i>
-              <h5 class="fw-bold">Service 3</h5>
-              <p class="text-muted small">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card">
+              <img src="Images/favorite-chart.png" alt="Service 3" class="service-img">
+              <h5 class="service-title">Service 3</h5>
+              <p class="service-text">
                 Comprehensive plans to support the sustainability of your business and maximize its impact.
               </p>
             </div>
@@ -182,44 +187,123 @@
   </div>
 </section>
 
-
-<!-- CSS -->
 <style>
-/* حركة عند التحميل */
+/* ======= Service Card Styles ======= */
 .service-card {
+  width: 251px;
+  height: 287px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
   transform: translateY(30px);
   opacity: 0;
-  transition: all 0.6s ease-in-out;
+  box-shadow: -40px 100px 70px 0px #7979790D, 40px 0px 70px 0px #7979790D;
+  margin: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-/* يظهر تدريجيا */
 .service-card.visible {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* Hover Effect */
 .service-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: -40px 100px 70px 0px #7979791A, 40px 0px 70px 0px #7979791A;
+}
+
+/* عنوان الكارت */
+.service-title {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #14183E;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+/* نص الكارت */
+.service-text {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 27px;
+  color: #747582;
+}
+
+/* صورة الكارت */
+.service-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ======= Responsive adjustments ======= */
+@media (max-width: 768px) {
+  #services .col-lg-4,
+  #services .col-lg-8 {
+    text-align: center; /* كل حاجة في النص */
+  }
+  .service-card {
+    width: 95%;
+    margin: 1rem auto;
+  }
+  .service-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* العنوان والوصف في النص */
+  }
+  .service-main-title {
+    margin-bottom: 15px;
+  }
+  .service-description {
+    max-width: 90%;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-main-title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  .service-description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .service-title {
+    font-size: 18px;
+  }
+  .service-text {
+    font-size: 14px;
+  }
 }
 </style>
 
-<!-- JS: يضيف كلاس visible عند ظهور الكروت -->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".service-card");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.2 });
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll("#services .service-card");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.2 });
 
-    cards.forEach(card => observer.observe(card));
-  });
+  cards.forEach(card => observer.observe(card));
+});
 </script>
+
+
 
 <br>
 
@@ -263,40 +347,78 @@
             Because in the last 6 months alone, we successfully executed over 60 projects (restaurants, cafés, events, furniture exhibitions, sports clubs).
           </li>
         </ul>
-        <a href="aboutus.html" class="btn btn-custom" style="background:#29abe2; border:none; color:#fff;">
-          Learn More
-        </a>
+       <a href="aboutus.html" class="btn-custom">Learn More</a>
+
+<style>
+.btn-custom {
+  width: 210px;
+  height: 68px;
+  background: #29ABE2;
+  border: 2px solid #FFFFFFCC;
+  color: #fff;
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-align: center;
+  border-radius: 192px;
+  box-shadow: 0px 30px 50px 0px #A8164B26;
+  display: flex;
+  justify-content: center;  /* يوسّط أفقي */
+  align-items: center;      /* يوسّط عمودي */
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 35px 55px 0px #A8164B40;
+}
+</style>
+
       </div>
 
     </div>
   </div>
+
 </section>
 
-<hr>
+
 
 <div class="container mt-5">
   <!-- النص البرتقالي الصغير -->
-  <p class="fw-bold mb-1" style="
-    color:#fbb040; 
-    letter-spacing:1px; 
-    font-size:15px; 
-    text-transform:uppercase;
+  <p class="testimonial-small" style="
+    color: #FAAF43; 
+    letter-spacing: 0px; 
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
     text-align: left;
+    margin-bottom: 5px;
   ">
-    Testimonial
+    TESTIMONIAL
   </p>
 
   <!-- العنوان الرئيسي بالأسود -->
-  <h2 class="mb-4 fw-bold" style="
-    font-family: 'Arial', sans-serif;
-    color: #000000;  /* لون أسود */
+  <h2 class="testimonial-title" style="
+    font-family: Outfit, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: 2%;
+    color: #282C4B;
     text-align: left;
+    margin-bottom: 20px;
   ">
     Our Clients’ Testimonials
   </h2>
 
   <!-- الوصف -->
-  <p class="mb-5 lead" style="color: #555; text-align: left;">
+  <p class="testimonial-desc mb-5" style="color: #555; text-align: left;">
     Trust is earned, not given.. Every success story with our clients has been a testimony 
     to our commitment to excellence and the quality we deliver.
   </p>
@@ -311,17 +433,16 @@
 
           <!-- Testimonial 1 -->
           <div class="col-12 col-md-6">
-            <div class="p-4 shadow rounded bg-white h-100">
+            <div class="testimonial-card p-4 rounded bg-white h-100">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h5 class="fw-bold" style="color: #29abe2;">Rmalina – Riyadh (Event)</h5>
+                  <h5 class="testimonial-slide-title">Rmalina – Riyadh (Event)</h5>
                   <p>
                     SABEQ made a tangible difference. Our presence doubled and engagement on platforms increased in an unexpected way.
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/vecteezy_3d-male-character-presenting-to-the-right_24785849.png" 
-                       class="img-fluid rounded-circle" alt="Rmalina">
+                  <img src="Images/Ellipse232.png" class="testimonial-img" alt="Rmalina">
                 </div>
               </div>
             </div>
@@ -329,17 +450,16 @@
 
           <!-- Testimonial 2 -->
           <div class="col-12 col-md-6">
-            <div class="p-4 shadow rounded bg-white h-100">
-              <div class="row align-items-center flex-md-row-reverse">
+            <div class="testimonial-card p-4 rounded bg-white h-100">
+              <div class="row align-items-center">
                 <div class="col-8">
-                  <h5 class="fw-bold" style="color: #faaf43;">Tikka & Curry – Al-Suwaidi (Restaurant)</h5>
+                  <h5 class="testimonial-slide-title">Tikka & Curry – Al-Suwaidi (Restaurant)</h5>
                   <p>
                     In a short time, the market knew us. More than 1,500 positive reviews confirmed to us that partnering with SABEQ was the right decision.
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/vecteezy_3d-male-character-got-an-idea-while-working-on-a-laptop_24785803.png" 
-                       class="img-fluid rounded-circle" alt="Tikka & Curry">
+                  <img src="Images/Ellipse232(1).png" class="testimonial-img" alt="Tikka & Curry">
                 </div>
               </div>
             </div>
@@ -354,17 +474,16 @@
 
           <!-- Testimonial 3 -->
           <div class="col-12 col-md-6">
-            <div class="p-4 shadow rounded bg-white h-100">
+            <div class="testimonial-card p-4 rounded bg-white h-100">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h5 class="fw-bold" style="color: #29abe2;">Dok Cafe – Al-Olaya (Coffee Shop)</h5>
+                  <h5 class="testimonial-slide-title">Dok Cafe – Al-Olaya (Coffee Shop)</h5>
                   <p>
                     Our sales kept increasing, and the content reached Explore and gained wide interaction from customers.
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/vecteezy_3d-male-character-happy-jumping_24785812.png" 
-                       class="img-fluid rounded-circle" alt="Dok Cafe">
+                  <img src="Images/person(2).jpeg" class="testimonial-img" alt="Dok Cafe">
                 </div>
               </div>
             </div>
@@ -372,17 +491,16 @@
 
           <!-- Testimonial 4 -->
           <div class="col-12 col-md-6">
-            <div class="p-4 shadow rounded bg-white h-100">
+            <div class="testimonial-card p-4 rounded bg-white h-100">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h5 class="fw-bold" style="color: #faaf43;">Rmalina – Riyadh (Event)</h5>
+                  <h5 class="testimonial-slide-title">Rmalina – Riyadh (Event)</h5>
                   <p>
                     SABEQ made a tangible difference. Our presence doubled and engagement on platforms increased in an unexpected way.
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/vecteezy_3d-male-character-presenting-to-the-right_24785849.png" 
-                       class="img-fluid rounded-circle" alt="Rmalina">
+                  <img src="Images/Ellipse232.png" class="testimonial-img" alt="Rmalina">
                 </div>
               </div>
             </div>
@@ -403,8 +521,56 @@
   </div>
 </div>
 
+<style>
+.testimonial-card {
+  width: 555px;
+  height: 365px;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: auto;
+  box-shadow: -40px 100px 70px 0px #29ABE20D, 40px 0px 70px 0px #29ABE20D;
+}
 
+/* الصور كلها نفس المقاس ومدورة */
+.testimonial-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 50%; /* يخلي الصورة دايرة */
+  display: block;
+}
 
+/* ======== Slide Titles ======== */
+.testimonial-slide-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 31px;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: #14142B;
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 992px) {
+  .testimonial-card {
+    width: 95%;
+    margin: 1rem auto;
+  }
+  .testimonial-title,
+  .testimonial-small,
+  .testimonial-desc,
+  .testimonial-slide-title {
+    text-align: center !important;
+  }
+  .testimonial-img {
+    width: 130px;
+    height: 130px;
+  }
+}
+</style>
 
 
 <div class="container mt-5" id="contact">
@@ -412,13 +578,10 @@
     
     <!-- صورة على الشمال -->
     <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
-      <!-- الخلفية -->
       <img src="Images/Group9146.png" 
            alt="Background Shape" 
            class="img-fluid position-absolute top-50 start-50 translate-middle" 
            style="max-height: 500px; z-index: 1; opacity: 0.9;">
-      
-      <!-- الصورة الأصلية -->
       <img src="Images/Marketing.png" 
            class="img-fluid position-relative" 
            alt="Illustration of Contact Us Section" 
@@ -429,51 +592,97 @@
     <div class="col-md-7">
       
       <!-- النص البرتقالي الصغير -->
-      <p class="fw-bold mb-1" style="color:#fbb040; letter-spacing:1px; font-size:15px; text-transform:uppercase;">
+      <p class="contact-small">
         CONTACT US
       </p>
       <br>
       
       <!-- العنوان الرئيسي -->
-      <h2 class="fw-bold mb-3" style="font-family: 'Arial', sans-serif; color: #000;">
+      <h2 class="contact-title">
         Let’s Collaborate Now!
       </h2>
       
-      <p class="mb-4 text-muted">
+      <!-- وصف -->
+      <p class="contact-desc mb-4">
         We’d love to hear from you! Fill out the form below and our team will get back to you soon.
       </p>
 
       <form action="https://formspree.io/f/xkgvqbow" method="POST">
+
+        <!-- Full Name -->
         <div class="mb-3">
-          <label for="fullName" class="form-label fw-bold" style="color:#000000;">Full Name</label>
-          <input type="text" class="form-control custom-input" id="fullName" name="fullName" placeholder="Input your Name" required>
+          <label for="fullName" class="form-label label-text">Full Name</label>
+          <input type="text" class="form-control input-long" id="fullName" name="fullName" placeholder="Input your Name" required>
         </div>
         
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="emailAddress" class="form-label fw-bold" style="color:#000000;">Email</label>
-            <input type="email" class="form-control custom-input" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
+        <!-- Email + Date -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="emailAddress" class="form-label label-text">Email</label>
+            <input type="email" class="form-control input-half" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="date" class="form-label fw-bold" style="color:#000000;">Date</label>
-            <input type="date" class="form-control custom-input" id="date" name="date" placeholder="Select Date">
+
+          <div class="col-md-6">
+            <label for="date" class="form-label label-text">Date</label>
+            <div class="position-relative">
+              <input type="date" class="form-control input-half ps-5" id="date" name="date">
+              <span class="position-absolute top-50 start-0 translate-middle-y ps-2">
+                <img src="Images/Calendar.png" alt="calendar" style="width:20px; height:20px;">
+              </span>
+            </div>
           </div>
         </div>
 
+        <!-- Brand -->
         <div class="mb-3">
-          <label for="brandName" class="form-label fw-bold" style="color:#000000;">Choose Your Brand</label>
-          <input type="text" class="form-control custom-input" id="brandName" name="brandName" placeholder="Enter brand name">
+          <label for="brandName" class="form-label label-text">Choose Your Brand</label>
+          <input type="text" class="form-control input-long" id="brandName" name="brandName" placeholder="Enter brand name">
         </div>
         
+        <!-- Message -->
         <div class="mb-3">
-          <label for="message" class="form-label fw-bold" style="color:#000000;">Message</label>
-          <textarea class="form-control custom-input" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
+          <label for="message" class="form-label label-text">Message</label>
+          <textarea class="form-control input-long ps-3" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
         </div>
-        
-        <button type="submit" class="btn fw-bold px-4 py-2" 
-          style="background-color:#29abe2; border:none; border-radius:30px; color:#fff;">
-          Send Message
-        </button>
+        <!-- Button -->
+<button type="submit" class="btn submit-btn">
+  <span class="btn-text">Send Message</span>
+</button>
+
+<style>
+  .submit-btn {
+    width: 210px;
+    height: 68px;
+    border-radius: 192px;
+    background: #29ABE2;
+    border: 2px solid #FFFFFFCC; /* أبيض شفاف */
+    box-shadow: 0px 30px 50px 0px #29ABE226;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .submit-btn:hover {
+    background: #1f94c7; /* لون أغمق شوية عند الهوفر */
+  }
+
+  .btn-text {
+    width: 127px;
+    height: 21px;
+
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #FFFFFF;
+    text-align: center;
+  }
+</style>
+
       </form>
     </div>
   </div>
@@ -484,23 +693,112 @@
 
 <!-- CSS -->
 <style>
-  .custom-input {
-    background-color: #29ABE20D !important; /* خلفية أزرق فاتح شفاف */
-    color: #747582 !important; /* لون النصوص */
-    border: none !important;   /* شيلت البوردر */
-    border-radius: 8px;
+  /* النص البرتقالي الصغير */
+  .contact-small {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FAAF43;
+    text-transform: uppercase;
   }
 
-  .custom-input::placeholder {
-    color: #747582 !important; /* لون الـ placeholder */
+  /* العنوان الرئيسي */
+  .contact-title {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: 2%;
+    color: #282C4B;
+  }
+
+  /* الوصف */
+  .contact-desc {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    color: #14142B;
+  }
+
+  /* اللابلز فوق كل بوكس */
+  .label-text {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: #14183E;
+  }
+
+  /* البوكسات */
+  .input-long,
+  .input-half {
+    width: 100%;
+    height: 58px;
+    background-color: #29ABE20D;
+    border: none;
+    border-radius: 10px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #747582;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .input-long::placeholder,
+  .input-half::placeholder {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #747582;
     opacity: 1;
   }
 
-  .custom-input:focus {
-    outline: none !important;
-    box-shadow: none !important; /* مفيش فريم عند الفوكس */
+  textarea.input-long {
+    height: auto;
+    padding-top: 10px;
+  }
+
+  /* شيل أيقونة الـ default من input date */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* زرار */
+  .submit-btn {
+    background-color: #29abe2;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
   }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -550,4 +848,3 @@
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
