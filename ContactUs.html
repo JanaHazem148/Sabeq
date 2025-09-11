@@ -46,36 +46,48 @@
     </div>
   </div>
 </nav>
-
-
 <section class="py-5" 
-         style="background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
+         style="background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%); font-family: Ubuntu, sans-serif;">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- النص -->
-      <div class="col-lg-6">
-         <!-- العنوان الصغير بالبرتقالي -->
-        <p class="fw-bold mb-1" style="color:#fbb040; font-size:14px; text-transform:uppercase;">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <!-- العنوان الصغير بالبرتقالي -->
+        <p style="color:#FAAF43; 
+                  font-weight:400; 
+                  font-size:16px; 
+                  line-height:100%; 
+                  letter-spacing:0;">
           <i class="bi bi-patch-check-fill me-2"></i>
           Best Business Platform - World Record 2025
         </p>
-        <br><br>
-        
-        <h1 class="fw-bold mb-3">
-          <span class="text-primary border-3 border-primary pb-1">Contact with</span> SABEQ
-        </h1>
-        <br>
-        
-        <p class="lead text-muted">
-          Every conversation is the beginning of a successful partnership.. 
+
+        <!-- العنوان الرئيسي -->
+       <h1 style="font-weight:700; 
+           font-size:50px; 
+           line-height:80px; 
+           letter-spacing:2%;">
+  <span  style="color: #29ABE2;">Contact with</span> SABEQ
+</h1>
+
+
+        <!-- النص الوصفي -->
+        <p style="font-weight:400; 
+                  font-size:20px; 
+                  line-height:36px; 
+                  color:#747582;">
+          Every conversation is the beginning of a successful partnership.  
           Fill in your details and let us reach out to help you build a strong presence for your brand.
         </p>
       </div>
 
       <!-- الصورة -->
       <div class="col-lg-6 text-center">
-        <img src="Images/contactus.png" class="img-fluid" alt="Contact Us Illustration">
+        <img src="Images/contactus.png" 
+             class="img-fluid" 
+             alt="Contact Us Illustration"
+             style="max-width:528px; height:auto;">
       </div>
 
     </div>
@@ -99,97 +111,163 @@
     </div>
   </div>
 
-  <!-- الفورم -->
-  <form action="https://formspree.io/f/xkgvqbow" method="POST" 
-        class="p-4 rounded-4 shadow-sm mx-auto" 
-       style="max-width: 700px; background: rgba(0, 123, 255, 0.03);"
-
-       >
 
 
-    <!-- Full Name + Email -->
-    <div class="row mb-4 justify-content-center">
-      <div class="col-md-5 mb-3 mb-md-0">
-        <div class="p-3 bg-white rounded-3 shadow-sm">
-          <label for="fullName" class="form-label fw-bold">Full Name</label>
-          <input type="text" 
-                 class="form-control border-0 border-bottom rounded-0 text-center" 
-                 id="fullName" 
-                 name="fullName" 
-                 placeholder="Enter your full name" 
-                 required>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div class="p-3 bg-white rounded-3 shadow-sm">
-          <label for="emailAddress" class="form-label fw-bold">Email</label>
-          <input type="email" 
-                 class="form-control border-0 border-bottom rounded-0 text-center" 
-                 id="emailAddress" 
-                 name="emailAddress" 
-                 placeholder="Enter your email" 
-                 required>
-        </div>
-      </div>
-    </div>
 
-    <!-- Choose Your Brand -->
-    <div class="mb-4">
-      <div class="p-3 bg-white rounded-3 shadow-sm">
-        <label class="form-label fw-bold d-block">Choose Your Brand</label>
-        <div class="row justify-content-center">
-          <div class="col-md-6 d-flex justify-content-center mb-2">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" id="restaurant" name="brand" value="Restaurant" checked>
-              <label class="form-check-label" for="restaurant">Restaurant</label>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex justify-content-center mb-2">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" id="cafe" name="brand" value="Cafe">
-              <label class="form-check-label" for="cafe">Cafe</label>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex justify-content-center mb-2">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" id="brands" name="brand" value="Brands">
-              <label class="form-check-label" for="brands">Brands</label>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex justify-content-center mb-2">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" id="others" name="brand" value="Others">
-              <label class="form-check-label" for="others">Others</label>
-            </div>
-          </div>
-        </div>
+
+<!-- Contact Form -->
+<form action="https://formspree.io/f/xkgvqbow" method="POST" 
+      class="mx-auto"
+      style="max-width:848px; background:#fff; border-radius:20px; padding:60px; 
+             font-family:Ubuntu, sans-serif; 
+             box-shadow:-40px 100px 70px 0px #29ABE20D, 40px 0px 70px 0px #29ABE20D;">
+
+  <!-- Full Name + Email -->
+  <div class="row g-3 mb-4 justify-content-center">
+
+    <!-- Full Name -->
+    <div class="col-md-6 d-flex justify-content-center">
+      <div style="width:349px; height:137px; 
+                  background:#FFFFFF; 
+                  border-radius:20px; 
+                  padding:20px;
+                  box-shadow:-40px 100px 70px 0px #29ABE20D, 
+                             40px 0px 70px 0px #29ABE20D;">
+        <label for="fullName" 
+               style="font-weight:500; font-size:18px; line-height:150%; color:#000;">
+          Full Name
+        </label>
+        <input type="text" 
+               id="fullName" 
+               name="fullName" 
+               placeholder="Enter your full name" 
+               required
+               class="form-control border-0 mt-2"
+               style="font-size:16px; background:transparent;">
       </div>
     </div>
 
-    <!-- Message -->
-    <div class="mb-4">
-      <div class="p-3 bg-white rounded-3 shadow-sm">
-        <label for="message" class="form-label fw-bold">Your Message</label>
-        <textarea class="form-control border-0 border-bottom rounded-0 text-center" 
-                  id="message" name="message" rows="5" 
-                  placeholder="Write your message here..." required></textarea>
+    <!-- Email -->
+    <div class="col-md-6 d-flex justify-content-center">
+      <div style="width:349px; height:137px; 
+                  background:#FFFFFF; 
+                  border-radius:20px; 
+                  padding:20px;
+                  box-shadow:-40px 100px 70px 0px #29ABE20D, 
+                             40px 0px 70px 0px #29ABE20D;">
+        <label for="emailAddress" 
+               style="font-weight:500; font-size:18px; line-height:150%; color:#000;">
+          Email
+        </label>
+        <input type="email" 
+               id="emailAddress" 
+               name="emailAddress" 
+               placeholder="Enter your email" 
+               required
+               class="form-control border-0 mt-2"
+               style="font-size:16px; background:transparent;">
       </div>
     </div>
+  </div>
 
-    <!-- زر الإرسال -->
-   <div class="text-center">
-  <button type="submit" 
-          class="btn btn-lg px-5 text-white" 
-          style="background-color: #29abe2; border: none; border-radius: 30px;">
-    Send Message
-  </button>
+  <!-- Choose Your Brand -->
+  <div class="mb-4">
+    <div style="background:#FFFFFF; border-radius:20px; padding:20px; 
+                box-shadow:-40px 100px 70px 0px #29ABE20D, 40px 0px 70px 0px #29ABE20D;">
+      <label class="d-block mb-3" 
+             style="font-weight:500; font-size:18px; line-height:150%; color:#000;">
+        Choose Your Brand
+      </label>
+      <div class="row g-3">
+
+        <!-- Restaurant -->
+        <div class="col-md-6">
+          <div class="form-check">
+            <input class="form-check-input brand-checkbox" type="checkbox" id="restaurant" name="brand" value="Restaurant">
+            <label class="form-check-label" for="restaurant">Restaurant</label>
+          </div>
+        </div>
+
+        <!-- Cafe -->
+        <div class="col-md-6">
+          <div class="form-check">
+            <input class="form-check-input brand-checkbox" type="checkbox" id="cafe" name="brand" value="Cafe">
+            <label class="form-check-label" for="cafe">Cafe</label>
+          </div>
+        </div>
+
+        <!-- Brands -->
+        <div class="col-md-6">
+          <div class="form-check">
+            <input class="form-check-input brand-checkbox" type="checkbox" id="brands" name="brand" value="Brands">
+            <label class="form-check-label" for="brands">Brands</label>
+          </div>
+        </div>
+
+        <!-- Others -->
+        <div class="col-md-6">
+          <div class="form-check">
+            <input class="form-check-input brand-checkbox" type="checkbox" id="others" name="brand" value="Others">
+            <label class="form-check-label" for="others">Others</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message -->
+  <div class="mb-4">
+    <div style="background:#FFFFFF; border-radius:20px; padding:20px; 
+                box-shadow:-40px 100px 70px 0px #29ABE20D, 40px 0px 70px 0px #29ABE20D;">
+      <label for="message" 
+             style="font-weight:500; font-size:18px; line-height:150%; color:#000;">
+        Your Message
+      </label>
+      <textarea class="form-control border-0 mt-2" 
+                id="message" name="message" rows="5" 
+                placeholder="Write your message here..." 
+                required
+                style="font-size:16px; background:transparent;"></textarea>
+    </div>
+  </div>
+
+  <!-- زر الإرسال -->
+  <div class="text-center">
+    <button type="submit" 
+            style="width:210px; height:68px; 
+                   background:#29ABE2; 
+                   border-radius:192px; 
+                   border:2px solid #FFFFFFCC; 
+                   box-shadow:0px 30px 50px 0px #29ABE226; 
+                   color:#FFFFFF; 
+                   font-family:Ubuntu, sans-serif; 
+                   font-weight:700; 
+                   font-size:18px; 
+                   line-height:100%; 
+                   letter-spacing:2%; 
+                   text-align:center;">
+      Send Message
+    </button>
+  </div>
+
+</form>
+
+<!-- JavaScript to allow only one checkbox selection -->
+<script>
+  const brandCheckboxes = document.querySelectorAll('.brand-checkbox');
+  brandCheckboxes.forEach(chk => {
+    chk.addEventListener('change', function() {
+      if (this.checked) {
+        brandCheckboxes.forEach(other => {
+          if (other !== this) other.checked = false;
+        });
+      }
+    });
+  });
+</script>
 </div>
 
 
-  </form>
-
-</div>
-<br><br><hr>
 
 
 
