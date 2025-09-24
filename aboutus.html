@@ -1,3 +1,4 @@
+Hamdy Sameh:
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +23,12 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top" >
   <div class="container">
     <a class="navbar-brand" href="home.html">
       <div style="display: flex; align-items: center; gap: 10px;">
-         <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
+       <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
+
       </div>
     </a>
 
@@ -38,9 +40,10 @@
 
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active mx-3" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="home.html#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html"><b style="color:#007bff;">About us</b></a></li>
+      <li class="nav-item"><a class="nav-link active mx-3" href="home.html"><b>Home</b></a></li>
+
+        
+        <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html">  <b style="color:#007bff;">About us </b></a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="plans.html">Plans</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="ContactUs.html">Contact Us</a></li>
         <li class="nav-item"><a class="nav-link disabled mx-3">Coming Soon</a></li>
@@ -48,6 +51,40 @@
     </div>
   </div>
 </nav>
+
+
+<style>
+  /* الحجم الطبيعي */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 20px 0;
+}
+
+/* لما يحصل scroll */
+.navbar.shrink {
+  padding: 5px 0;
+}
+
+.navbar.shrink img {
+  width: 100px !important;
+  height: 60px !important;
+  transition: all 0.3s ease;
+}
+
+</style>
+
+
+
+<script>
+  window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("shrink");
+    } else {
+      navbar.classList.remove("shrink");
+    }
+  });
+</script>
 
 <section class="hero py-5" 
          style="overflow:hidden; background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
@@ -57,10 +94,7 @@
       <!-- النص -->
       <div class="col-lg-6 mb-4 mb-lg-0">
         <!-- العنوان الصغير بالبرتقالي -->
-        <p class="best-platform">
-          <i class="bi bi-patch-check-fill me-2"></i>
-          Best Business Platform - World Record 2025
-        </p>
+    
 
         <!-- العنوان الرئيسي -->
         <h2 class="about-title mb-3">
@@ -75,19 +109,19 @@
           At SABEQ, we don’t just create campaigns—we craft experiences that resonate, inspire, and drive measurable success. Let’s shape a story that captivates your audience and elevates your brand to new heights.
         </p>
 
-        <!-- الإحصائيات -->
+<!-- الإحصائيات -->
         <div class="d-flex flex-wrap gap-5 stats">
           <div>
-            <h4 class="counter" data-target="3"><span class="plus">+</span>0</h4>
+            <h4 class="counter" data-target="6"><span class="plus">+</span>0</h4>
             <p class="counter-label">Months</p>
           </div>
           <div>
-            <h4 class="counter" data-target="30" data-suffix="K"><span class="plus">+</span>0K</h4>
-            <p class="counter-label">Views</p>
+            <h4 class="counter" data-target="42" ><span class="plus">+</span>0K</h4>
+            <p class="counter-label">projects</p>
           </div>
           <div>
-            <h4 class="counter" data-target="60"><span class="plus">+</span>0</h4>
-            <p class="counter-label">Clients</p>
+            <h4 class="counter" data-target="3000" ><span class="plus"></span>0</h4>
+            <p class="counter-label">Bloggers</p>
           </div>
         </div>
       </div>
@@ -229,7 +263,7 @@
             A service built on trust, <span  style="color: #29ABE2;">measured by results.</span>
           </h2>
 
-          <!-- النص -->
+<!-- النص -->
           <p class="lead text-muted mb-0">
             Success is not measured by promises. It is measured by what is truly achieved on the ground. 
             That’s why we focus on execution details and work as one team, giving every client a unique 
@@ -248,6 +282,292 @@
 <hr>
 <br>
 <br>
+
+
+
+<section class="video-section">
+  <div class="container">
+    <h2 class="section-title">
+      Real-world examples of how we have helped companies achieve their marketing objectives.
+    </h2>
+
+    <br><br>
+    <div class="slider">
+      <div class="slides">
+
+        <!-- فيديو 1 -->
+        <div class="reel card">
+          <blockquote class="tiktok-embed"
+            cite="https://www.tiktok.com/@m..riyadh/video/7501298799671889159"
+            data-video-id="7501298799671889159"
+            style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+            <section></section>
+          </blockquote>
+          <a href="https://www.tiktok.com/@m..riyadh/video/7501298799671889159" target="_blank" class="btn-tiktok">
+            Watch on TikTok
+          </a>
+        </div>
+
+        <!-- فيديو 2 -->
+        <div class="reel card">
+          <blockquote class="tiktok-embed"
+            cite="https://www.tiktok.com/@bashaeir_18/video/7455011450407472402"
+            data-video-id="7455011450407472402"
+            style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+            <section></section>
+          </blockquote>
+          <a href="https://www.tiktok.com/@bashaeir_18/video/7455011450407472402" target="_blank" class="btn-tiktok">
+            Watch on TikTok
+          </a>
+        </div>
+
+        <!-- فيديو 3 -->
+        <div class="reel card">
+          <blockquote class="tiktok-embed"
+            cite="https://www.tiktok.com/@hx92x/video/7503886273300548882"
+            data-video-id="7503886273300548882"
+            style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+            <section></section>
+          </blockquote>
+          <a href="https://www.tiktok.com/@hx92x/video/7503886273300548882" target="_blank" class="btn-tiktok">
+            Watch on TikTok
+          </a>
+        </div>
+
+        <!-- فيديو 4 -->
+        <div class="reel card">
+          <blockquote class="tiktok-embed"
+            cite="https://www.tiktok.com/@ass.saudi/video/7458781143601646856"
+            data-video-id="7458781143601646856"
+            style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+            <section></section>
+          </blockquote>
+          <a href="https://www.tiktok.com/@ass.saudi/video/7458781143601646856" target="_blank" class="btn-tiktok">
+            Watch on TikTok
+          </a>
+        </div>
+
+        <!-- فيديو 5 -->
+        <div class="reel card">
+          <blockquote class="tiktok-embed"
+            cite="https://www.tiktok.com/@sara.saudihfood/video/7521785617936600328"
+            data-video-id="7521785617936600328"
+            style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+            <section></section>
+          </blockquote>
+          <a href="https://www.tiktok.com/@sara.saudihfood/video/7521785617936600328" target="_blank" class="btn-tiktok">
+            Watch on TikTok
+          </a>
+        </div>
+        <!-- فيديو 6 -->
+<div class="reel card">
+  <blockquote class="tiktok-embed"
+    cite="https://www.tiktok.com/@arrosh.vlogger/video/7545574993682287892"
+    data-video-id="7545574993682287892"
+    style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+    <section></section>
+  </blockquote>
+  <a href="https://www.tiktok.com/@arrosh.vlogger/video/7545574993682287892" target="_blank" class="btn-tiktok">
+    Watch on TikTok
+  </a>
+</div>
+
+<!-- فيديو 7 -->
+<div class="reel card">
+  <blockquote class="tiktok-embed"
+    cite="https://www.tiktok.com/@a7lam028/video/7501398832056454408"
+    data-video-id="7501398832056454408"
+    style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+    <section></section>
+  </blockquote>
+  <a href="https://www.tiktok.com/@a7lam028/video/7501398832056454408" target="_blank" class="btn-tiktok">
+    Watch on TikTok
+  </a>
+</div>
+
+<!-- فيديو 8 -->
+<div class="reel card">
+  <blockquote class="tiktok-embed"
+    cite="https://www.tiktok.com/@lmoo199/video/7479107023209073927"
+    data-video-id="7479107023209073927"
+    style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+    <section></section>
+  </blockquote>
+  <a href="https://www.tiktok.com/@lmoo199/video/7479107023209073927" target="_blank" class="btn-tiktok">
+    Watch on TikTok
+  </a>
+</div>
+
+<!-- فيديو 9 -->
+<div class="reel card">
+  <blockquote class="tiktok-embed"
+    cite="https://www.tiktok.com/@nasa2.28/video/7517407483955039496"
+    data-video-id="7517407483955039496"
+    style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+    <section></section>
+  </blockquote>
+  <a href="https://www.tiktok.com/@nasa2.28/video/7517407483955039496" target="_blank" class="btn-tiktok">
+    Watch on TikTok
+  </a>
+</div>
+
+<!-- فيديو 10 -->
+<div class="reel card">
+  <blockquote class="tiktok-embed"
+    cite="https://www.tiktok.com/@juwlyna_99/video/7521737836207426834"
+    data-video-id="7521737836207426834"
+    style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+    <section></section>
+  </blockquote>
+  <a href="https://www.tiktok.com/@juwlyna_99/video/7521737836207426834" target="_blank" class="btn-tiktok">
+    Watch on TikTok
+  </a>
+</div>
+
+<!-- فيديو 11 -->
+<div class="reel card">
+  <blockquote class="tiktok-embed"
+    cite="https://www.tiktok.com/@vvvlogger.ella/video/7442433506166181138"
+    data-video-id="7442433506166181138"
+    style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+    <section></section>
+  </blockquote>
+  <a href="https://www.tiktok.com/@vvvlogger.ella/video/7442433506166181138" target="_blank" class="btn-tiktok">
+    Watch on TikTok
+  </a>
+</div>
+
+<!-- فيديو 12 -->
+<div class="reel card">
+  <blockquote class="tiktok-embed"
+    cite="https://www.tiktok.com/@rr_1245/video/7485797940406144274"
+    data-video-id="7485797940406144274"
+    style="max-width: 250px; min-width: 250px; height: 444px; border-radius:16px; overflow:hidden;">
+    <section></section>
+  </blockquote>
+  <a href="https://www.tiktok.com/@rr_1245/video/7485797940406144274" target="_blank" class="btn-tiktok">
+    Watch on TikTok
+  </a>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- سكريبت TikTok -->
+<script async src="https://www.tiktok.com/embed.js">
+
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const videos = document.querySelectorAll(".reel video");
+
+    videos.forEach(video => {
+      video.addEventListener("play", () => {
+        video.currentTime = 0; // يبدأ من الأول
+      });
+    });
+  });
+</script>
+
+<style>
+.video-section {
+  background: linear-gradient(135deg, #F3E7D9, #E3EEFF);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  background: linear-gradient(90deg, #007bff, #FAAF43);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: max-content;
+  animation: slide 30s linear infinite;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.btn-tiktok {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: linear-gradient(90deg, #ff0050, #00f2ea);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn-tiktok:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .slides {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+</style>
+
+
+
+
+<br>
+<br>
+<br>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -335,7 +655,7 @@
     gap: 24px; /* مسافة بين العنوان والجملة */
   }
 
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .faq-left-box {
       margin-right: 40px; /* مسافة بين العمود الشمال واليمين */
     }
@@ -421,20 +741,22 @@
 
   questions.forEach(q => {
     q.addEventListener("click", () => {
-      // close all
+      const isActive = q.classList.contains("active");
+
+      // قفل كل البوكسات
       questions.forEach(item => {
         item.classList.remove("active");
         item.nextElementSibling.classList.remove("show");
       });
 
-      // open current
-      q.classList.add("active");
-      q.nextElementSibling.classList.add("show");
+      // لو مش مفتوح افتحه، لو مفتوح يفضل مقفول
+      if (!isActive) {
+        q.classList.add("active");
+        q.nextElementSibling.classList.add("show");
+      }
     });
   });
 </script>
-
-
 
 
 
@@ -499,15 +821,24 @@
             <input type="email" class="form-control input-half" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
           </div>
 
-          <div class="col-md-6">
-            <label for="date" class="form-label label-text">Date</label>
-            <div class="position-relative">
-              <input type="date" class="form-control input-half ps-5" id="date" name="date">
-              <span class="position-absolute top-50 start-0 translate-middle-y ps-2">
-                <img src="Images/Calendar.png" alt="calendar" style="width:20px; height:20px;">
-              </span>
-            </div>
-          </div>
+<div class="col-md-6">
+  <label for="date" class="form-label label-text">Date</label>
+  <div class="position-relative">
+    <input type="date" class="form-control input-half ps-5 custom-date" id="date" name="date">
+    <span class="position-absolute top-50 start-0 translate-middle-y ps-2" style="cursor: pointer;" onclick="document.getElementById('date').showPicker()">
+      <img src="Images/Calendar.png" alt="calendar" style="width:20px; height:20px;">
+    </span>
+  </div>
+</div>
+
+<style>
+/* إخفاء أيكون الـ calendar الافتراضي */
+.custom-date::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+</style>
+
         </div>
 
         <!-- Brand -->
@@ -659,27 +990,6 @@
   }
 </style>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Footer -->
 <footer class="pt-4" style="
   background-color: #282c4b;
@@ -712,7 +1022,7 @@
     <div class="d-flex justify-content-center mb-3">
       <ul class="list-inline mb-0">
         <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-        <li class="list-inline-item mx-3"><a href="home.html#services" class="text-white text-decoration-none">Services</a></li>
+
         <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
