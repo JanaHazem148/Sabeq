@@ -18,13 +18,13 @@
 
 </head>
 <body>
-    
-
-<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+   
+<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top" >
   <div class="container">
     <a class="navbar-brand" href="home.html">
       <div style="display: flex; align-items: center; gap: 10px;">
-         <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
+       <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
+
       </div>
     </a>
 
@@ -36,16 +36,51 @@
 
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active mx-3" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="home.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link active mx-3" href="home.html">Home</b></a></li>
+        
         <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html">About us</a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="#"> <b  style="color:#007bff;">Plans</b></a></li>
+        <li class="nav-item"><a class="nav-link mx-3" href="plans.html"><b  style="color:#007bff;">Plans</b></a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="ContactUs.html">Contact Us</a></li>
         <li class="nav-item"><a class="nav-link disabled mx-3">Coming Soon</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+<style>
+  /* الحجم الطبيعي */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 20px 0;
+}
+
+/* لما يحصل scroll */
+.navbar.shrink {
+  padding: 5px 0;
+}
+
+.navbar.shrink img {
+  width: 100px !important;
+  height: 60px !important;
+  transition: all 0.3s ease;
+}
+
+</style>
+
+
+
+<script>
+  window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("shrink");
+    } else {
+      navbar.classList.remove("shrink");
+    }
+  });
+</script>
+
 
 <!-- القسم الأول -->
 <section class="py-5" 
@@ -56,11 +91,7 @@
       <!-- النص -->
       <div class="col-lg-6 mb-4 mb-lg-0">
         
-        <!-- العنوان الصغير -->
-        <p class="platform-title mb-4">
-          <i class="bi bi-patch-check-fill me-2"></i>
-          Best Business Platform - World Record 2025
-        </p>
+      
         
         <!-- العنوان الأساسي -->
         <h1 class="fw-bold mb-4">
@@ -121,8 +152,9 @@
 
 <!-- ✅ Modal Custom Plan -->
 <div class="modal fade" id="customPlanModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-4 shadow-lg p-4">
+<div class="modal-dialog modal-dialog-centered" style="max-width:500px;"> <!-- أقصى عرض 500px -->
+
+    <div class="modal-content rounded-4 shadow-lg p-3 p-md-4">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h4 class="fw-bold mb-0">Custom Plan</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -135,7 +167,7 @@
         <div id="step2Indicator" class="rounded-circle bg-light text-dark fw-bold d-flex align-items-center justify-content-center" style="width:30px;height:30px;">2</div>
       </div>
 
-      <!-- رسائل الحالة -->
+      <!-- Status -->
       <div id="formStatus" class="alert d-none" role="alert"></div>
 
       <form id="multiStepForm" action="https://formspree.io/f/xkgvqbow" method="POST" novalidate>
@@ -150,8 +182,21 @@
           </div>
 
           <div class="mb-3">
-            <label for="bloggersInput" class="form-label">Number of Bloggers</label>
-            <input type="number" class="form-control" id="bloggersInput" name="bloggers" placeholder="Enter number of bloggers" min="1" required>
+            <label class="form-label d-block">Number of Bloggers</label>
+            <div class="row g-2 text-center">
+              <div class="col-12 col-md-4 mb-2">
+                <label class="form-label fw-semibold">Hospitality</label>
+                <input type="number" class="form-control" name="hospitalityNumber" placeholder="0" min="0" required>
+              </div>
+              <div class="col-12 col-md-4 mb-2">
+                <label class="form-label fw-semibold">Paid 300</label>
+                <input type="number" class="form-control" name="paid300Number" placeholder="0" min="0" required>
+              </div>
+              <div class="col-12 col-md-4 mb-2">
+                <label class="form-label fw-semibold">Paid 1000+</label>
+                <input type="number" class="form-control" name="paid1000Number" placeholder="0" min="0" required>
+              </div>
+            </div>
           </div>
 
           <button type="button" class="wavy-btn w-100" id="nextBtn">
@@ -162,12 +207,12 @@
 
         <!-- STEP 2 -->
         <div id="step-2" class="d-none">
-          <div class="row">
-            <div class="col-md-6 mb-3">
+          <div class="row g-2">
+            <div class="col-12 col-md-6 mb-2">
               <label class="form-label">Full Name</label>
               <input type="text" class="form-control" name="fullName" placeholder="Your Name" required>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-12 col-md-6 mb-2">
               <label class="form-label">Phone</label>
               <input type="tel" class="form-control" name="phone" placeholder="Your Phone" required>
             </div>
@@ -183,13 +228,13 @@
             <textarea class="form-control" name="message" rows="3" placeholder="Write Message..." required></textarea>
           </div>
 
-          <div class="d-flex gap-2">
-            <button type="button" class="wavy-btn w-25" id="backBtn">
+          <div class="d-flex flex-column flex-md-row gap-2">
+            <button type="button" class="wavy-btn w-100 w-md-25" id="backBtn">
               <div class="text">Back</div>
               <div class="wave"></div>
             </button>
 
-            <button type="submit" class="wavy-btn w-75" id="submitBtn">
+            <button type="submit" class="wavy-btn w-100 w-md-75" id="submitBtn">
               <div class="text">Send Message</div>
               <div class="wave"></div>
             </button>
@@ -200,93 +245,91 @@
   </div>
 </div>
 
-<!-- ✅ سكربت الخاص بالـ Form -->
 <script>
-  const nextBtn = document.getElementById("nextBtn");
-  const backBtn = document.getElementById("backBtn");
-  const step1 = document.getElementById("step-1");
-  const step2 = document.getElementById("step-2");
-  const step1Indicator = document.getElementById("step1Indicator");
-  const step2Indicator = document.getElementById("step2Indicator");
-  const form = document.getElementById("multiStepForm");
-  const formStatus = document.getElementById("formStatus");
-  const submitBtn = document.getElementById("submitBtn");
+const nextBtn = document.getElementById("nextBtn");
+const backBtn = document.getElementById("backBtn");
+const step1 = document.getElementById("step-1");
+const step2 = document.getElementById("step-2");
+const step1Indicator = document.getElementById("step1Indicator");
+const step2Indicator = document.getElementById("step2Indicator");
+const form = document.getElementById("multiStepForm");
+const formStatus = document.getElementById("formStatus");
+const submitBtn = document.getElementById("submitBtn");
 
-  // منع الفورم يترسل بالـ Enter
-  form.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && e.target.tagName !== "TEXTAREA") {
-      e.preventDefault();
-    }
-  });
+// منع الفورم يترسل بالـ Enter
+form.addEventListener("keydown", e => {
+  if (e.key === "Enter" && e.target.tagName !== "TEXTAREA") e.preventDefault();
+});
 
-  function validateStep1() {
-    const fields = step1.querySelectorAll("input[required]");
-    for (const el of fields) {
-      if (!el.value) { el.reportValidity(); return false; }
-    }
-    return true;
+function validateStep1() {
+  const fields = step1.querySelectorAll("input[required]");
+  for (const el of fields) {
+    if (!el.value) { el.reportValidity(); return false; }
   }
+  return true;
+}
 
-  nextBtn?.addEventListener("click", () => {
-    if (!validateStep1()) return;
-    step1.classList.add("d-none");
-    step2.classList.remove("d-none");
-    step1Indicator.classList.replace("bg-warning","bg-light");
-    step1Indicator.classList.add("text-dark");
-    step2Indicator.classList.replace("bg-light","bg-warning");
-    step2Indicator.classList.add("text-white");
-  });
+nextBtn?.addEventListener("click", () => {
+  if (!validateStep1()) return;
+  step1.classList.add("d-none");
+  step2.classList.remove("d-none");
+  step1Indicator.classList.replace("bg-warning","bg-light");
+  step1Indicator.classList.add("text-dark");
+  step2Indicator.classList.replace("bg-light","bg-warning");
+  step2Indicator.classList.add("text-white");
+});
 
-  backBtn?.addEventListener("click", () => {
-    step2.classList.add("d-none");
-    step1.classList.remove("d-none");
-    step2Indicator.classList.replace("bg-warning","bg-light");
-    step2Indicator.classList.remove("text-white");
-    step1Indicator.classList.replace("bg-light","bg-warning");
-    step1Indicator.classList.remove("text-dark");
-    formStatus.classList.add("d-none");
-  });
+backBtn?.addEventListener("click", () => {
+  step2.classList.add("d-none");
+  step1.classList.remove("d-none");
+  step2Indicator.classList.replace("bg-warning","bg-light");
+  step2Indicator.classList.remove("text-white");
+  step1Indicator.classList.replace("bg-light","bg-warning");
+  step1Indicator.classList.remove("text-dark");
+  formStatus.classList.add("d-none");
+});
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    formStatus.className = "alert d-none";
-    submitBtn.disabled = true;
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = "Sending...";
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  formStatus.className = "alert d-none";
+  submitBtn.disabled = true;
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = "Sending...";
 
-    try {
-      const resp = await fetch(form.action, {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: new FormData(form)
-      });
+  try {
+    const resp = await fetch(form.action, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    });
 
-      if (resp.ok) {
-        form.reset();
-        backBtn?.click();
-        formStatus.className = "alert alert-success";
-        formStatus.textContent = "✅ Thanks! Your message has been sent. We will contact you soon.";
-        formStatus.classList.remove("d-none");
-      } else {
-        let msg = "Something went wrong while sending the message.";
-        try {
-          const data = await resp.json();
-          if (data && data.errors) msg = data.errors.map(e => e.message).join(", ");
-        } catch(_) {}
-        formStatus.className = "alert alert-danger";
-        formStatus.textContent = msg + " Please try again.";
-        formStatus.classList.remove("d-none");
-      }
-    } catch (err) {
-      formStatus.className = "alert alert-danger";
-      formStatus.textContent = "Network error. Please check your connection and try again.";
+    if (resp.ok) {
+      form.reset();
+      backBtn?.click();
+      formStatus.className = "alert alert-success";
+      formStatus.textContent = "✅ Thanks! Your message has been sent. We will contact you soon.";
       formStatus.classList.remove("d-none");
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
+    } else {
+      let msg = "Something went wrong while sending the message.";
+      try {
+        const data = await resp.json();
+        if (data && data.errors) msg = data.errors.map(e => e.message).join(", ");
+      } catch(_) {}
+      formStatus.className = "alert alert-danger";
+      formStatus.textContent = msg + " Please try again.";
+      formStatus.classList.remove("d-none");
     }
-  });
+  } catch (err) {
+    formStatus.className = "alert alert-danger";
+    formStatus.textContent = "Network error. Please check your connection and try again.";
+    formStatus.classList.remove("d-none");
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
+});
 </script>
+
 
 
 
@@ -302,163 +345,235 @@
         Packages tailored to your needs whether you’re just starting your project or a major brand seeking expansion :
       </p>
     </div>
+<div class="row g-4">
 
-    <div class="row g-4">
+  <style>
+    /* =============================== */
+    /*      Hover Lift for Cards       */
+    /* =============================== */
+    .package-col {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .package-col:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+    .check-icon {
+      transition: transform 0.3s ease;
+    }
+    .package-col:hover .check-icon {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body class="bg-light">
 
-      <!-- Trial -->
-      <div class="col-md-6 col-lg-3 d-flex flex-column">
-        <div class="card shadow border-0 rounded-3 text-center mb-3">
-          <div class="card-body py-5">
-            <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Trial Package 🌟</small>
-            <h2 class="fw-bold text-primary mb-3">SAR 3,000</h2>
-            <div class="text-center">
-              <button class="pay-now-btn" data-package="trial">
-                Pay Now <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Trial -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column package-col">
+      <div class="card shadow border-0 rounded-3 text-center mb-3 custom-card">
+        <div class="card-body">
+          <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Trial Package 🌟</small>
+          <h2 class="fw-bold text-primary mb-3">SAR 3,000</h2>
+          <div class="text-center">
+            <button class="pay-now-btn btn btn-outline-primary" data-package="trial">
+              Pay Now <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
-        <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled feature-list mb-0">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              30 Bloggers (hospitality only)
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              Coordination Fee: Included
-            </li>
-            <li class="d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              Hospitality: All 30 bloggers covered
-            </li>
-          </ul>
-        </div>
       </div>
-
-      <!-- Silver -->
-      <div class="col-md-6 col-lg-3 d-flex flex-column">
-        <div class="card shadow border-0 rounded-3 text-center mb-3">
-          <div class="card-body py-5">
-            <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Silver Package 🎖</small>
-            <h2 class="fw-bold text-primary mb-3">SAR 6,000</h2>
-            <div class="text-center">
-              <button class="pay-now-btn" data-package="silver">
-                Pay Now <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled feature-list mb-0">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              30 Bloggers
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              20 Hospitality + 10 Paid (SAR 300 each)
-            </li>
-            <li class="d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              Coordination Fee: SAR 3,000
-            </li>
-          </ul>
-        </div>
+      <div class="bg-white p-3 rounded-4 flex-fill h-100">
+        <ul class="list-unstyled feature-list mb-0">
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            30 Bloggers (hospitality only)
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            Coordination Fee: Included
+          </li>
+          <li class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            Hospitality: All 30 bloggers covered
+          </li>
+        </ul>
       </div>
-
-      <!-- Gold -->
-      <div class="col-md-6 col-lg-3 d-flex flex-column">
-        <div class="card shadow border-0 rounded-3 text-center mb-3">
-          <div class="card-body py-5">
-            <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Gold Package 🥇</small>
-            <h2 class="fw-bold text-primary mb-3">SAR 11,000</h2>
-            <div class="text-center">
-              <button class="pay-now-btn" data-package="gold">
-                Pay Now <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled feature-list mb-0">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              31 Bloggers
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              15 Hospitality + 15 Paid (SAR 300 each)
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              1 Strong Influencer (worth SAR 2,500)
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              Coordination Fee: SAR 3,500
-            </li>
-            <li class="d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              Targeted TikTok Promotion (worth SAR 500)
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Diamond -->
-      <div class="col-md-6 col-lg-3 d-flex flex-column">
-        <div class="card shadow border-0 rounded-3 text-center mb-3 text-white" style="background: linear-gradient(105deg, #29ABE2, #FAAF43);">
-          <div class="card-body py-5">
-            <small class="text-uppercase fw-semibold d-block mb-2 d-flex justify-content-center align-items-center gap-2">
-              <i class="bi bi-gem"></i> Diamond Package 💎
-            </small>
-            <h2 class="fw-bold mb-3">SAR 16,000</h2>
-            <div class="text-center">
-              <button class="pay-now-btn" data-package="diamond">
-                Pay Now <i class="bi bi-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-3 rounded-4 flex-fill h-100">
-          <ul class="list-unstyled feature-list mb-0">
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              37 Bloggers
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              15 Hospitality + 20 Paid (SAR 300 each)
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              2 Strong Influencers (worth SAR 2,500 each)
-            </li>
-            <li class="d-flex align-items-center mb-2">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              Coordination Fee: SAR 4,500
-            </li>
-            <li class="d-flex align-items-center">
-              <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
-              Targeted TikTok Promotion (worth SAR 500)
-            </li>
-          </ul>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Silver -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column package-col">
+      <div class="card shadow border-0 rounded-3 text-center mb-3 custom-card">
+        <div class="card-body">
+          <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Silver Package 🎖</small>
+          <h2 class="fw-bold text-primary mb-3">SAR 6,000</h2>
+          <div class="text-center">
+            <button class="pay-now-btn btn btn-outline-primary" data-package="silver">
+              Pay Now <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-3 rounded-4 flex-fill h-100">
+        <ul class="list-unstyled feature-list mb-0">
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            30 Bloggers
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            20 Hospitality + 10 Paid (SAR 300 each)
+          </li>
+          <li class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            Coordination Fee: SAR 3,000
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Gold -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column package-col">
+      <div class="card shadow border-0 rounded-3 text-center mb-3 custom-card">
+        <div class="card-body">
+          <small class="text-uppercase fw-semibold text-secondary d-block mb-2">Gold Package 🥇</small>
+          <h2 class="fw-bold text-primary mb-3">SAR 11,000</h2>
+          <div class="text-center">
+            <button class="pay-now-btn btn btn-outline-primary" data-package="gold">
+              Pay Now <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-3 rounded-4 flex-fill h-100">
+        <ul class="list-unstyled feature-list mb-0">
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            31 Bloggers
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            15 Hospitality + 15 Paid (SAR 300 each)
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            1 Strong Influencer (worth SAR 2,500)
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            Coordination Fee: SAR 3,500
+          </li>
+          <li class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            Targeted TikTok Promotion (worth SAR 500)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Diamond -->
+    <div class="col-md-6 col-lg-3 d-flex flex-column package-col">
+      <div class="card shadow border-0 rounded-3 text-center mb-3 text-white custom-card" style="background: linear-gradient(105deg, #29ABE2, #FAAF43);">
+        <div class="card-body">
+          <small class="text-uppercase fw-semibold d-block mb-2 d-flex justify-content-center align-items-center gap-2">
+            <i class="bi bi-gem"></i> Diamond Package 💎
+          </small>
+          <h2 class="fw-bold mb-3">SAR 16,000</h2>
+          <div class="text-center">
+            <button class="pay-now-btn btn btn-light text-dark" data-package="diamond">
+              Pay Now <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-3 rounded-4 flex-fill h-100">
+        <ul class="list-unstyled feature-list mb-0">
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            37 Bloggers
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            15 Hospitality + 20 Paid (SAR 300 each)
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            2 Strong Influencers (worth SAR 2,500 each)
+          </li>
+          <li class="d-flex align-items-center mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            Coordination Fee: SAR 4,500
+          </li>
+          <li class="d-flex align-items-center">
+            <i class="bi bi-check-circle-fill text-primary me-2 check-icon"></i>
+            Targeted TikTok Promotion (worth SAR 500)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
 
     <hr>
 
-    <!-- ✅ زرار كاستم بلان -->
-    <div class="text-center mt-5">
-      <button class="btn btn-lg btn-outline-primary px-5 rounded-pill shadow-sm"
-              data-bs-toggle="modal" data-bs-target="#customPlanModal">
-        <i class="bi bi-bullseye"></i> Get Your Custom Plan
-      </button>
-    </div>
-  </div>
+   <!-- ✅ زرار كاستم بلان -->
+<div class="text-center mt-5">
+  <button class="btn btn-lg custom-plan-btn px-5 rounded-pill shadow-sm"
+          data-bs-toggle="modal" data-bs-target="#customPlanModal">
+    <i class="bi bi-bullseye"></i> Get Your Custom Plan
+  </button>
+</div>
+
+<!-- 🎨 CSS -->
+<style>
+.custom-plan-btn {
+  background: linear-gradient(90deg, #007bff, #6f42c1);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 18px 50px;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  animation: pulseGlow 3s infinite;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+/* ✨ Hover effect */
+.custom-plan-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(111, 66, 193, 0.9), 0 0 60px rgba(0, 123, 255, 0.7);
+  background: linear-gradient(90deg, #6f42c1, #007bff);
+}
+
+/* ✨ Multi-color pulse */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+  }
+  25% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(111, 66, 193, 0.8), 0 0 50px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px rgba(0, 123, 255, 0.9), 0 0 70px rgba(111, 66, 193, 0.6);
+  }
+  75% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(111, 66, 193, 0.8), 0 0 50px rgba(0, 123, 255, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+  }
+}
+</style>
+
 </section>
 
 <!-- CSS -->
@@ -471,6 +586,22 @@
     text-align: center;
     color: #282C4B;
   }
+
+ .custom-card {
+  min-height: 300px; 
+}
+.custom-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;    
+  height: 100%;
+}
+@media (max-width: 1000px) {
+  .custom-card {
+    min-height: 220px; 
+  }
+}
 
   .pricing-subtitle {
     font-weight: 400;
@@ -589,21 +720,15 @@
 
 
 
-
-
-
 <div class="container mt-5" id="contact">
   <div class="row align-items-center">
     
     <!-- صورة على الشمال -->
     <div class="col-md-5 text-center mb-4 mb-md-0 position-relative">
-      <!-- الخلفية -->
       <img src="Images/Group9146.png" 
            alt="Background Shape" 
            class="img-fluid position-absolute top-50 start-50 translate-middle" 
            style="max-height: 500px; z-index: 1; opacity: 0.9;">
-      
-      <!-- الصورة الأصلية -->
       <img src="Images/Marketing.png" 
            class="img-fluid position-relative" 
            alt="Illustration of Contact Us Section" 
@@ -614,51 +739,106 @@
     <div class="col-md-7">
       
       <!-- النص البرتقالي الصغير -->
-      <p class="fw-bold mb-1" style="color:#fbb040; letter-spacing:1px; font-size:15px; text-transform:uppercase;">
+      <p class="contact-small">
         CONTACT US
       </p>
       <br>
       
       <!-- العنوان الرئيسي -->
-      <h2 class="fw-bold mb-3" style="font-family: 'Arial', sans-serif; color: #000;">
+      <h2 class="contact-title">
         Let’s Collaborate Now!
       </h2>
       
-      <p class="mb-4 text-muted">
+      <!-- وصف -->
+      <p class="contact-desc mb-4">
         We’d love to hear from you! Fill out the form below and our team will get back to you soon.
       </p>
 
       <form action="https://formspree.io/f/xkgvqbow" method="POST">
+
+        <!-- Full Name -->
         <div class="mb-3">
-          <label for="fullName" class="form-label fw-bold" style="color:#000000;">Full Name</label>
-          <input type="text" class="form-control custom-input" id="fullName" name="fullName" placeholder="Input your Name" required>
+          <label for="fullName" class="form-label label-text">Full Name</label>
+          <input type="text" class="form-control input-long" id="fullName" name="fullName" placeholder="Input your Name" required>
         </div>
         
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="emailAddress" class="form-label fw-bold" style="color:#000000;">Email</label>
-            <input type="email" class="form-control custom-input" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
+        <!-- Email + Date -->
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="emailAddress" class="form-label label-text">Email</label>
+            <input type="email" class="form-control input-half" id="emailAddress" name="emailAddress" placeholder="Input your Email" required>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="date" class="form-label fw-bold" style="color:#000000;">Date</label>
-            <input type="date" class="form-control custom-input" id="date" name="date" placeholder="Select Date">
-          </div>
+
+          <div class="col-md-6">
+  <label for="date" class="form-label label-text">Date</label>
+  <div class="position-relative">
+    <input type="date" class="form-control input-half ps-5 custom-date" id="date" name="date">
+    <span class="position-absolute top-50 start-0 translate-middle-y ps-2" style="cursor: pointer;" onclick="document.getElementById('date').showPicker()">
+      <img src="Images/Calendar.png" alt="calendar" style="width:20px; height:20px;">
+    </span>
+  </div>
+</div>
+
+<style>
+/* إخفاء أيكون الـ calendar الافتراضي */
+.custom-date::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+</style>
+
         </div>
 
+        <!-- Brand -->
         <div class="mb-3">
-          <label for="brandName" class="form-label fw-bold" style="color:#000000;">Choose Your Brand</label>
-          <input type="text" class="form-control custom-input" id="brandName" name="brandName" placeholder="Enter brand name">
+          <label for="brandName" class="form-label label-text">Choose Your Brand</label>
+          <input type="text" class="form-control input-long" id="brandName" name="brandName" placeholder="Enter brand name">
         </div>
         
+        <!-- Message -->
         <div class="mb-3">
-          <label for="message" class="form-label fw-bold" style="color:#000000;">Message</label>
-          <textarea class="form-control custom-input" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
+          <label for="message" class="form-label label-text">Message</label>
+          <textarea class="form-control input-long ps-3" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
         </div>
-        
-        <button type="submit" class="btn fw-bold px-4 py-2" 
-          style="background-color:#29abe2; border:none; border-radius:30px; color:#fff;">
-          Send Message
-        </button>
+        <!-- Button -->
+<button type="submit" class="btn submit-btn">
+  <span class="btn-text">Send Message</span>
+</button>
+
+<style>
+  .submit-btn {
+    width: 210px;
+    height: 68px;
+    border-radius: 192px;
+    background: #29ABE2;
+    border: 2px solid #FFFFFFCC; /* أبيض شفاف */
+    box-shadow: 0px 30px 50px 0px #29ABE226;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+
+  .submit-btn:hover {
+    background: #1f94c7; /* لون أغمق شوية عند الهوفر */
+  }
+
+  .btn-text {
+    width: 127px;
+    height: 21px;
+
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #FFFFFF;
+    text-align: center;
+  }
+</style>
+
       </form>
     </div>
   </div>
@@ -669,23 +849,112 @@
 
 <!-- CSS -->
 <style>
-  .custom-input {
-    background-color: #29ABE20D !important; /* خلفية أزرق فاتح شفاف */
-    color: #747582 !important; /* لون النصوص */
-    border: none !important;   /* شيلت البوردر */
-    border-radius: 8px;
+  /* النص البرتقالي الصغير */
+  .contact-small {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FAAF43;
+    text-transform: uppercase;
   }
 
-  .custom-input::placeholder {
-    color: #747582 !important; /* لون الـ placeholder */
+  /* العنوان الرئيسي */
+  .contact-title {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: 2%;
+    color: #282C4B;
+  }
+
+  /* الوصف */
+  .contact-desc {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+    color: #14142B;
+  }
+
+  /* اللابلز فوق كل بوكس */
+  .label-text {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: #14183E;
+  }
+
+  /* البوكسات */
+  .input-long,
+  .input-half {
+    width: 100%;
+    height: 58px;
+    background-color: #29ABE20D;
+    border: none;
+    border-radius: 10px;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #747582;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+
+  .input-long::placeholder,
+  .input-half::placeholder {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #747582;
     opacity: 1;
   }
 
-  .custom-input:focus {
-    outline: none !important;
-    box-shadow: none !important; /* مفيش فريم عند الفوكس */
+  textarea.input-long {
+    height: auto;
+    padding-top: 10px;
+  }
+
+  /* شيل أيقونة الـ default من input date */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* زرار */
+  .submit-btn {
+    background-color: #29abe2;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
   }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -722,7 +991,7 @@
     <div class="d-flex justify-content-center mb-3">
       <ul class="list-inline mb-0">
         <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-        <li class="list-inline-item mx-3"><a href="home.html#services" class="text-white text-decoration-none">Services</a></li>
+
         <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
@@ -735,3 +1004,4 @@
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
