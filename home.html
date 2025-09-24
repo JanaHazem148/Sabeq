@@ -24,7 +24,7 @@
   <div class="container">
     <a class="navbar-brand" href="home.html">
       <div style="display: flex; align-items: center; gap: 10px;">
-       <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
+        <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
 
       </div>
     </a>
@@ -37,8 +37,8 @@
 
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active mx-3" href="#"><b  style="color:#007bff;">Home</b></a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link active mx-3" href="home.html"><b  style="color:#007bff;">Home</b></a></li>
+        
         <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html">About us</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="plans.html">Plans</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="ContactUs.html">Contact Us</a></li>
@@ -49,12 +49,42 @@
 </nav>
 
 
+<style>
+  /* الحجم الطبيعي */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 20px 0;
+}
+
+/* لما يحصل scroll */
+.navbar.shrink {
+  padding: 5px 0;
+}
+
+.navbar.shrink img {
+  width: 100px !important;
+  height: 60px !important;
+  transition: all 0.3s ease;
+}
+
+</style>
 
 
 
+<script>
+  window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("shrink");
+    } else {
+      navbar.classList.remove("shrink");
+    }
+  });
+</script>
 
 
-<!-- Hero Section -->
+
+<<!-- Hero Section -->
 <section class="hero py-5 position-relative" 
          style="overflow:hidden; background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
   <div class="container">
@@ -62,21 +92,15 @@
 
       <!-- العمود الشمال -->
       <div class="col-lg-6">
-        <!-- الرسالة -->
-        <div class="d-flex align-items-center mb-3" 
-             style="color:#FAAF43; font-family:Ubuntu, sans-serif; font-weight:400; font-size:16px; line-height:100%;">
-          <i class="bi bi-patch-check-fill me-2"></i>
-          Best Business Platform - World Record 2025
-        </div>
-
+     
         <!-- العنوان -->
-        <h1 style="font-family:Ubuntu, sans-serif; font-weight:700; font-size:50px; line-height:80px; letter-spacing:0.02em;">
+        <h1 class="hero-title">
           <span style="color:black;">We focus on showcasing the strengths of your business</span> 
           <span style="color:#29ABE2;"> in a genuine, authentic way that brings you closer to your audience.</span>
         </h1>
 
         <!-- الفقرة -->
-        <p style="font-family:Ubuntu, sans-serif; font-weight:400; font-size:20px; line-height:36px; color:#747582;">
+        <p class="hero-text">
           Let us help you build a brand that truly connects with people and grows stronger every day.
         </p>
 
@@ -96,7 +120,7 @@
              style="bottom: 0; left: 50%; transform: translateX(-50%); width: 90%; z-index: 1;
                     filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(1225%) hue-rotate(171deg) brightness(94%) contrast(96%);">
 
-        <!-- البرتقالي -->
+<!-- البرتقالي -->
         <img src="Images/MaskGroup(2).png" 
              alt="orange-bg" 
              class="position-absolute" 
@@ -114,6 +138,52 @@
              alt="Hero Image" 
              style="z-index: 5;">
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+  .hero-title {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 80px;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-text {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    color: #747582;
+  }
+
+  /* موبايل */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 28px;
+      line-height: 42px;
+    }
+    .hero-text {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  /* تابلت */
+  @media (max-width: 992px) and (min-width: 769px) {
+    .hero-title {
+      font-size: 36px;
+      line-height: 54px;
+    }
+    .hero-text {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+</style>
 
     </div>
   </div>
@@ -128,7 +198,7 @@
       <div class="col-lg-4 text-lg-start text-center">
         <div class="service-header">
           <small class="text-uppercase fw-bold" 
-                 style="font-family: Ubuntu; font-weight: 400; font-size: 16px; line-height: 100%; letter-spacing: 0%; color: #F17216;">
+                  style="font-family: Ubuntu; font-weight: 400; font-size: 16px; line-height: 100%; letter-spacing: 0%; color: #F17216;">
             Services
           </small>
           <h2 class="service-main-title" 
@@ -136,7 +206,7 @@
             Our Capabilities
           </h2>
           <p class="service-description" 
-             style="font-family: Ubuntu; font-weight: 400; font-size: 20px; line-height: 32px; color: #747582; max-width: 350px; margin: 20px 0 0 0;">
+              style="font-family: Ubuntu; font-weight: 400; font-size: 20px; line-height: 32px; color: #747582; max-width: 350px; margin: 20px 0 0 0;">
             We don’t just provide services; we create a complete ecosystem of expertise and strategic vision
             to strengthen your brand’s position and open growth horizons beyond expectations.
           </p>
@@ -169,10 +239,10 @@
             </div>
           </div>
 
-          <!-- Service 3 -->
+<!-- Service 3 -->
           <div class="col-md-6 col-lg-4">
             <div class="service-card">
-              <img src="Images/favoriteChart.png" alt="Service 3" class="service-img">
+              <img src="Images/favorite-chart.png" alt="Service 3" class="service-img">
               <h5 class="service-title">Service 3</h5>
               <p class="service-text">
                 Comprehensive plans to support the sustainability of your business and maximize its impact.
@@ -316,18 +386,18 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="col-lg-6 text-center mb-4 mb-lg-0 position-relative">
         <!-- الخلفية -->
         <img src="Images/Group2073.png" 
-             alt="Background Design" 
-             class="img-fluid position-absolute top-50 start-50 translate-middle" 
-             style="max-height: 420px; z-index: 1;">
+              alt="Background Design" 
+              class="img-fluid position-absolute top-50 start-50 translate-middle" 
+              style="max-height: 420px; z-index: 1;">
 
         <!-- صورة البنت -->
         <img src="Images/discoverwithus.png" 
-             alt="Why Choose Us" 
-             class="img-fluid position-relative" 
-             style="max-height: 420px; z-index: 2;">
+              alt="Why Choose Us" 
+              class="img-fluid position-relative" 
+              style="max-height: 420px; z-index: 2;">
       </div>
 
-      <!-- النص -->
+<!-- النص -->
       <div class="col-lg-6">
         <small class="text-uppercase fw-bold" style="color: #faaf43;">Why Choose Us</small>
         <h2 class="fw-bold mb-4" style="font-size: 2rem; line-height: 1.4; color: #fff;">
@@ -442,13 +512,13 @@ document.addEventListener("DOMContentLoaded", () => {
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/Ellipse232.png" class="testimonial-img" alt="Rmalina">
+                  <img src="Images/vecteezy_3d-male-character-happy-jumping_24785812.png" class="testimonial-img" alt="Rmalina">
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Testimonial 2 -->
+<!-- Testimonial 2 -->
           <div class="col-12 col-md-6">
             <div class="testimonial-card p-4 rounded bg-white h-100">
               <div class="row align-items-center">
@@ -459,7 +529,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/Ellipse232(1).png" class="testimonial-img" alt="Tikka & Curry">
+                  <img src="Images/vecteezy_3d-male-character-got-an-idea-while-working-on-a-laptop_24785803.png" class="testimonial-img" alt="Tikka & Curry">
                 </div>
               </div>
             </div>
@@ -483,7 +553,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/person(2).jpeg" class="testimonial-img" alt="Dok Cafe">
+                  <img src="Images/vecteezy_3d-male-character-happy-jumping_24785812.png" class="testimonial-img" alt="Dok Cafe">
                 </div>
               </div>
             </div>
@@ -500,7 +570,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   </p>
                 </div>
                 <div class="col-4 text-center">
-                  <img src="Images/Ellipse232.png" class="testimonial-img" alt="Rmalina">
+                  <img src="Images/vecteezy_3d-male-character-presenting-to-the-right_24785849.png" class="testimonial-img" alt="Rmalina">
                 </div>
               </div>
             </div>
@@ -521,7 +591,38 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </div>
 
-<style>
+<style>.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #007bff; /* أزرق Bootstrap */
+  border-radius: 50%; 
+  width: 45px;
+  height: 45px;
+  background-size: 60% 60%; /* يصغر السهم جوا الدايرة */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: #0056b3; /* أزرق أغمق عند الهوفر */
+  transform: scale(1.1); /* تكبر شوية عند المرور */
+}
+
+/* إبعاد الأزرار عن المحتوى */
+.carousel-control-prev {
+  left: -70px;
+}
+
+.carousel-control-next {
+  right: -70px;
+}
+
+
+
 .testimonial-card {
   width: 555px;
   height: 365px;
@@ -573,6 +674,99 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 
 
+<!-- ===== Clients Logo Slider ===== -->
+<section id="clients" class="py-5" style="background: linear-gradient(90deg, #1e3c72, #ff7e5f);">
+  <div class="container text-center">
+    <p style="color:#FAAF43; font-size:16px; font-weight:400; text-transform:uppercase; margin-bottom:5px;">
+      OUR PARTNERS
+    </p>
+    <h2 style="font-weight:700; font-size:32px; color:#fff; margin-bottom:40px;">
+      Companies We Worked With
+    </h2>
+  </div>
+
+  <!-- Slider -->
+  <div class="logo-slider">
+    <div class="logo-track">
+      <img src="Images/logo1.jpg" alt="Client 1">
+      <img src="Images/logo2.jpg" alt="Client 2">
+      <img src="Images/logo3.jpg" alt="Client 3">
+      <img src="Images/logo4.jpg" alt="Client 4">
+      <img src="Images/logo5.jpg" alt="Client 5">
+      <img src="Images/logo6.jpg" alt="Client 6">
+
+      <!-- تكرار نفس الصور عشان تعمل Loop سلس -->
+      <img src="Images/logo1.jpg" alt="Client 1">
+      <img src="Images/logo2.jpg" alt="Client 2">
+      <img src="Images/logo3.jpg" alt="Client 3">
+      <img src="Images/logo4.jpg" alt="Client 4">
+      <img src="Images/logo5.jpg" alt="Client 5">
+      <img src="Images/logo6.jpg" alt="Client 6">
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background: linear-gradient(90deg, #1e3c72, #ff7e5f);
+}
+
+.logo-track {
+  display: flex;
+  width: calc(200px * 12); /* عدد الصور × حجمها */
+  animation: scroll 25s linear infinite;
+}
+
+.logo-track img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 25px;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  background: #fff;
+  padding: 10px;
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* الحركة المستمرة */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* -50% يعني نص الصور بالظبط */
+}
+
+/* موبايل */
+@media (max-width:768px) {
+  .logo-track img {
+    width: 100px;
+    height: 100px;
+    margin: 0 15px;
+  }
+}
+</style>
+
+                  
+
+
+
+
+
+
+
+
+
+
+
 <div class="container mt-5" id="contact">
   <div class="row align-items-center">
     
@@ -609,7 +803,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <form action="https://formspree.io/f/xkgvqbow" method="POST">
 
-        <!-- Full Name -->
+<!-- Full Name -->
         <div class="mb-3">
           <label for="fullName" class="form-label label-text">Full Name</label>
           <input type="text" class="form-control input-long" id="fullName" name="fullName" placeholder="Input your Name" required>
@@ -623,14 +817,23 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="col-md-6">
-            <label for="date" class="form-label label-text">Date</label>
-            <div class="position-relative">
-              <input type="date" class="form-control input-half ps-5" id="date" name="date">
-              <span class="position-absolute top-50 start-0 translate-middle-y ps-2">
-                <img src="Images/Calendar.png" alt="calendar" style="width:20px; height:20px;">
-              </span>
-            </div>
-          </div>
+  <label for="date" class="form-label label-text">Date</label>
+  <div class="position-relative">
+    <input type="date" class="form-control input-half ps-5 custom-date" id="date" name="date">
+    <span class="position-absolute top-50 start-0 translate-middle-y ps-2" style="cursor: pointer;" onclick="document.getElementById('date').showPicker()">
+      <img src="Images/Calendar.png" alt="calendar" style="width:20px; height:20px;">
+    </span>
+  </div>
+</div>
+
+<style>
+/* إخفاء أيكون الـ calendar الافتراضي */
+.custom-date::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+</style>
+
         </div>
 
         <!-- Brand -->
@@ -764,7 +967,7 @@ document.addEventListener("DOMContentLoaded", () => {
     padding-top: 10px;
   }
 
-  /* شيل أيقونة الـ default من input date */
+/* شيل أيقونة الـ default من input date */
   input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     cursor: pointer;
@@ -835,7 +1038,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="d-flex justify-content-center mb-3">
       <ul class="list-inline mb-0">
         <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-        <li class="list-inline-item mx-3"><a href="home.html#services" class="text-white text-decoration-none">Services</a></li>
+
         <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
