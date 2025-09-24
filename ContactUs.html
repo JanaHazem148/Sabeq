@@ -20,11 +20,12 @@
 <body>
     
 
-<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top" >
   <div class="container">
     <a class="navbar-brand" href="home.html">
       <div style="display: flex; align-items: center; gap: 10px;">
-         <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
+       <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
+
       </div>
     </a>
 
@@ -37,15 +38,50 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active mx-3" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="home.html#services">Services</a></li>
+        
         <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html">About us</a></li>
-        <li class="nav-item"><a class="nav-link mx-3" href="plans.html"> Plans</a></li>
+        <li class="nav-item"><a class="nav-link mx-3" href="plans.html">Plans</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="ContactUs.html"><b  style="color:#007bff;">Contact Us</b></a></li>
         <li class="nav-item"><a class="nav-link disabled mx-3">Coming Soon</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+<style>
+  /* الحجم الطبيعي */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 20px 0;
+}
+
+/* لما يحصل scroll */
+.navbar.shrink {
+  padding: 5px 0;
+}
+
+.navbar.shrink img {
+  width: 100px !important;
+  height: 60px !important;
+  transition: all 0.3s ease;
+}
+
+</style>
+
+
+
+<script>
+  window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("shrink");
+    } else {
+      navbar.classList.remove("shrink");
+    }
+  });
+</script>
+
 <section class="py-5" 
          style="background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%); font-family: Ubuntu, sans-serif;">
   <div class="container">
@@ -53,15 +89,7 @@
 
       <!-- النص -->
       <div class="col-lg-6 mb-4 mb-lg-0">
-        <!-- العنوان الصغير بالبرتقالي -->
-        <p style="color:#FAAF43; 
-                  font-weight:400; 
-                  font-size:16px; 
-                  line-height:100%; 
-                  letter-spacing:0;">
-          <i class="bi bi-patch-check-fill me-2"></i>
-          Best Business Platform - World Record 2025
-        </p>
+ 
 
         <!-- العنوان الرئيسي -->
        <h1 style="font-weight:700; 
@@ -302,7 +330,7 @@
     <div class="d-flex justify-content-center mb-3">
       <ul class="list-inline mb-0">
         <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-        <li class="list-inline-item mx-3"><a href="home.html#services" class="text-white text-decoration-none">Services</a></li>
+
         <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
@@ -313,4 +341,6 @@
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
 
