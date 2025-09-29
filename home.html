@@ -8,25 +8,20 @@
   <link rel="stylesheet" href="bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
   <title>Home - SABEQ</title>
   <meta name="description" content="Welcome to SABEQ. We provide marketing solutions that go beyond expectations.">
-
-  <!-- Favicon -->
   <link rel="icon" href="Images/LogoMarkPNG.png" type="image/png" />
 </head>
 <body>
 
 
-<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top" >
+<nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand" href="home.html">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="Images/FullLogoPNG.png" alt="logo" style="width:150px; height:90px; object-fit:contain;">
-
       </div>
     </a>
 
@@ -38,8 +33,7 @@
 
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active mx-3" href="home.html"><b  style="color:#007bff;">Home</b></a></li>
-        
+        <li class="nav-item"><a class="nav-link active mx-3" href="home.html"><b style="color:#007bff;">Home</b></a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="aboutus.html">About us</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="plans.html">Plans</a></li>
         <li class="nav-item"><a class="nav-link mx-3" href="ContactUs.html">Contact Us</a></li>
@@ -51,29 +45,22 @@
 
 
 <style>
-  /* الحجم الطبيعي */
+/* Navbar shrink effect */
 .navbar {
   transition: all 0.3s ease;
   padding: 20px 0;
 }
-
-/* لما يحصل scroll */
 .navbar.shrink {
   padding: 5px 0;
 }
 .navbar img {
   transition: all 0.3s ease;
 }
-
 .navbar.shrink img {
   width: 100px !important;
   height: 60px !important;
-  transition: all 0.3s ease;
 }
-
 </style>
-
-
 
 <script>
   window.addEventListener("scroll", function() {
@@ -86,112 +73,118 @@
   });
 </script>
 
-
-
 <!-- Hero Section -->
 <section class="hero py-5 position-relative" 
-         style="overflow:hidden; background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%);">
+         style="overflow:hidden; background: linear-gradient(to top, #F3E7D9 0%, #ffffff 100%); margin-top:100px;">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center text-center text-lg-start">
 
-      <!-- العمود الشمال -->
-      <div class="col-lg-6">
-     
-        <!-- العنوان -->
+      <!-- النص -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
         <h1 class="hero-title">
           <span style="color:black;">We focus on showcasing the strengths of your business</span> 
           <span style="color:#29ABE2;"> in a genuine, authentic way that brings you closer to your audience.</span>
         </h1>
-
-        <!-- الفقرة -->
         <p class="hero-text">
           Let us help you build a brand that truly connects with people and grows stronger every day.
         </p>
-
-        <!-- زرار Get Started -->
         <a href="plans.html">
           <button class="btn-get-started">Get Started</button>
         </a>
       </div>
 
-      <!-- العمود اليمين -->
+      <!-- الصور -->
       <div class="col-lg-6 text-center position-relative">
-
-        <!-- الأزرق -->
+        <!-- صور ديكوريشن تختفي في الموبايل -->
         <img src="Images/MaskGroup(1).png" 
              alt="blue-bg" 
-             class="position-absolute" 
+             class="position-absolute d-none d-md-block" 
              style="bottom: 0; left: 50%; transform: translateX(-50%); width: 90%; z-index: 1;
                     filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(1225%) hue-rotate(171deg) brightness(94%) contrast(96%);">
 
-<!-- البرتقالي -->
         <img src="Images/MaskGroup(2).png" 
              alt="orange-bg" 
-             class="position-absolute" 
+             class="position-absolute d-none d-md-block" 
              style="top: 20%; left: 40%; width: 50%; z-index: 2;">
 
-        <!-- السهم -->
         <img src="Images/Vector.png" 
              alt="arrow" 
-             class="position-absolute" 
+             class="position-absolute d-none d-md-block" 
              style="top: 50%; left: 0; transform: translateY(-50%); width: 20%; z-index: 3;">
 
-        <!-- صورة الراجل -->
+        <!-- الصورة الأساسية -->
         <img src="Images/Mediaillustration.png" 
-             class="img-fluid position-relative" 
+             class="img-fluid position-relative mx-auto d-block" 
              alt="Hero Image" 
-             style="z-index: 5;">
+             style="z-index: 5; max-width:100%;">
       </div>
     </div>
   </div>
 </section>
 
+
 <!-- CSS -->
 <style>
+.hero-title {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 80px;
+  letter-spacing: 0.02em;
+}
+.hero-text {
+  font-family: Ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  color: #747582;
+}
+.btn-get-started {
+  background: #29ABE2;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.btn-get-started:hover {
+  background: #007bff;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
   .hero-title {
-    font-family: Ubuntu, sans-serif;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 80px;
-    letter-spacing: 0.02em;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
   }
-
   .hero-text {
-    font-family: Ubuntu, sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 36px;
-    color: #747582;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
   }
+  .btn-get-started {
+    margin: auto;
+    display: block;
+  }
+}
 
-  /* موبايل */
-  @media (max-width: 768px) {
-    .hero-title {
-      font-size: 28px;
-      line-height: 42px;
-    }
-    .hero-text {
-      font-size: 16px;
-      line-height: 26px;
-    }
+/* تابلت */
+@media (max-width: 992px) and (min-width: 769px) {
+  .hero-title {
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
   }
-
-  /* تابلت */
-  @media (max-width: 992px) and (min-width: 769px) {
-    .hero-title {
-      font-size: 36px;
-      line-height: 54px;
-    }
-    .hero-text {
-      font-size: 18px;
-      line-height: 30px;
-    }
+  .hero-text {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
   }
+}
 </style>
 
-    </div>
-  </div>
-</section>
 
 <!-- ======= Services Section ======= -->
 <section id="services" style="background-color: #ffffff; padding: 80px 0;">
@@ -381,6 +374,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <br>
 
+
+
 <!-- Why Choose Us Section -->
 <section id="why-us" class="py-5" style="background: #282c4b; color: white; position: relative; overflow: hidden;">
   <div class="container">
@@ -401,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
               style="max-height: 420px; z-index: 2;">
       </div>
 
-<!-- النص -->
+      <!-- النص -->
       <div class="col-lg-6">
         <small class="text-uppercase fw-bold" style="color: #faaf43;">Why Choose Us</small>
         <h2 class="fw-bold mb-4" style="font-size: 2rem; line-height: 1.4; color: #fff;">
@@ -421,43 +416,57 @@ document.addEventListener("DOMContentLoaded", () => {
             Because in the last 6 months alone, we successfully executed over 60 projects (restaurants, cafés, events, furniture exhibitions, sports clubs).
           </li>
         </ul>
-       <a href="aboutus.html" class="btn-custom">Learn More</a>
 
-<style>
-.btn-custom {
-  width: 210px;
-  height: 68px;
-  background: #29ABE2;
-  border: 2px solid #FFFFFFCC;
-  color: #fff;
-  font-family: Ubuntu;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 2%;
-  text-align: center;
-  border-radius: 192px;
-  box-shadow: 0px 30px 50px 0px #A8164B26;
-  display: flex;
-  justify-content: center;  /* يوسّط أفقي */
-  align-items: center;      /* يوسّط عمودي */
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        <!-- زرار في نص الشاشة على الموبايل -->
+        <div class="btn-wrapper">
+          <a href="aboutus.html" class="btn-custom">Learn More</a>
+        </div>
 
-.btn-custom:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 35px 55px 0px #A8164B40;
-}
-</style>
+        <style>
+          .btn-custom {
+            width: 210px;
+            height: 68px;
+            background: #29ABE2;
+            border: 2px solid #FFFFFFCC;
+            color: #fff;
+            font-family: Ubuntu;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 2%;
+            text-align: center;
+            border-radius: 192px;
+            box-shadow: 0px 30px 50px 0px #A8164B26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 35px 55px 0px #A8164B40;
+          }
+
+          /* وسط الزرار في الموبايل */
+          .btn-wrapper {
+            display: flex;
+            justify-content: center;
+          }
+
+          /* في الشاشات الكبيرة يرجع شمال */
+          @media (min-width: 992px) {
+            .btn-wrapper {
+              justify-content: flex-start;
+            }
+          }
+        </style>
 
       </div>
-
     </div>
   </div>
-
 </section>
-
 
 
 <div class="container mt-5">
@@ -624,6 +633,88 @@ document.addEventListener("DOMContentLoaded", () => {
 .carousel-control-next {
   right: -70px;
 }
+/* ===== Testimonials ===== */
+.testimonial-card {
+  max-width: 555px;       /* أقصى عرض للكارت */
+  width: 100%;            /* يملأ عرض العمود */
+  min-height: 320px;      /* ارتفاع مرن */
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: auto;
+  box-shadow: -40px 100px 70px 0px #29ABE20D, 
+              40px 0px 70px 0px #29ABE20D;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* الصور */
+.testimonial-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 50%;
+  display: block;
+}
+
+/* النص */
+.testimonial-slide-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #14142B;
+  margin-bottom: 10px;
+}
+
+/* الكاروسيل */
+#testimonialCarousel .carousel-inner {
+  min-height: auto; /* ما يحددش ارتفاع ثابت */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .testimonial-card {
+    max-width: 90%;
+    min-height: auto;
+    padding: 1rem;
+  }
+  .testimonial-title,
+  .testimonial-small,
+  .testimonial-desc,
+  .testimonial-slide-title {
+    text-align: center !important;
+  }
+  .testimonial-img {
+    width: 110px;
+    height: 110px;
+    margin-top: 15px;
+  }
+  /* أزرار الكاروسيل تقرب من النص */
+  .carousel-control-prev {
+    left: -30px;
+  }
+  .carousel-control-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-slide-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .testimonial-img {
+    width: 90px;
+    height: 90px;
+  }
+  .testimonial-card {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+}
 
 
 
@@ -694,10 +785,10 @@ document.addEventListener("DOMContentLoaded", () => {
 <section id="clients" class="py-5" style="background: linear-gradient(90deg, #1e3c72, #ff7e5f);">
   <div class="container text-center">
     <p style="color:#FAAF43; font-size:16px; font-weight:400; text-transform:uppercase; margin-bottom:5px;">
-      OUR PARTNERS
+      OUR Work
     </p>
     <h2 style="font-weight:700; font-size:32px; color:#fff; margin-bottom:40px;">
-      Companies We Worked With
+      Pojects we worked on
     </h2>
   </div>
 
@@ -882,9 +973,48 @@ document.addEventListener("DOMContentLoaded", () => {
           <textarea class="form-control input-long ps-3" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
         </div>
         <!-- Button -->
-<button type="submit" class="btn submit-btn">
-  <span class="btn-text">Send Message</span>
-</button>
+<!-- Button -->
+<div class="text-center">
+  <button type="submit" class="btn submit-btn">
+    <span class="btn-text">Send Message</span>
+  </button>
+</div>
+
+<style>
+  .submit-btn {
+    width: 210px;
+    height: 68px;
+    border-radius: 192px;
+    background: #29ABE2;
+    border: 2px solid #FFFFFFCC; /* أبيض شفاف */
+    box-shadow: 0px 30px 50px 0px #29ABE226;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 0 auto; /* للتأكد من التوسيط */
+  }
+
+  .submit-btn:hover {
+    background: #1f94c7; /* لون أغمق شوية عند الهوفر */
+  }
+
+  .btn-text {
+    width: 127px;
+    height: 21px;
+
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #FFFFFF;
+    text-align: center;
+  }
+</style>
+
 
 <style>
   .submit-btn {
@@ -1033,18 +1163,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
-
-
-
-
 <!-- Footer -->
-<footer class="pt-4" style="
-  background-color: #282c4b;
-  color: white;
-">
+<footer class="pt-4" style="background-color: #282c4b; color: white;">
   <div class="container">
     <br>
     <div class="row align-items-center">
@@ -1067,21 +1187,88 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
 
-    <!-- Links -->
+    <!-- Links & Socials -->
     <hr class="border-light">
-    <div class="d-flex justify-content-center mb-3">
-      <ul class="list-inline mb-0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <!-- روابط -->
+      <ul class="list-inline mb-0 mx-auto">
         <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-
         <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
+
+      <!-- أيقونات السوشيال -->
+      <div class="d-flex align-items-center">
+        <a href="https://www.tiktok.com/@sabeq_official?_t=ZN-9053avA45jy&_r=1" target="_blank" class="social-frame me-2">
+          <i class="bi bi-tiktok small-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/sabeq_official?igsh=MXhvam54M3VtangxeA==" target="_blank" class="social-frame">
+          <i class="bi bi-instagram small-icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- حقوق النشر والتسجيل -->
+    <div class="text-center mt-3" style="font-size: 0.85rem; color: #ccc;">
+      <p class="mb-1">© 2025 Sabeq. All Rights Reserved.</p>
+      <p class="mb-1">VAT Registration Number: 312811302900003</p>
+      <p class="mb-1">CR: 7035659916 | Effective Registration Date: 04/08/2025</p>
+      <!-- علم السعودية -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" 
+           alt="Saudi Arabia Flag" 
+           class="saudi-flag mt-2">
     </div>
   </div>
   <br>
 </footer>
 
+<!-- CSS -->
+<style>
+  .small-icon {
+    font-size: 0.9rem; 
+    transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+  }
+
+  .social-frame {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; 
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-frame:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  .social-frame:hover .bi-tiktok {
+    color: #000;
+  }
+
+  .social-frame:hover .bi-instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* علم السعودية */
+  .saudi-flag {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .saudi-flag:hover {
+    transform: scale(1.2);
+  }
+</style>
 
 <script src="bootstrap.bundle.min.js"></script>
 </body>
-</html>  
+</html>
