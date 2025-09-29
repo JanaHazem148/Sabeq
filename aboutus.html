@@ -215,44 +215,56 @@
     margin: auto;
   }
 </style>
-<script>function startCounters() {
+
+<script>
+function startCounters() {
   const counters = document.querySelectorAll(".counter");
+  const duration = 2000; // المدة بالـ ms (هنا 2 ثانية)
+  const startTime = performance.now();
 
-  counters.forEach(counter => {
-    const target = +counter.getAttribute("data-target");
-    const suffix = counter.getAttribute("data-suffix") || "";
-    let count = 0;
-    const increment = Math.max(1, target / 200);
+  const updateCounters = (now) => {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1); // من 0 لحد 1
 
-    const updateCounter = () => {
-      if (count < target) {
-        count += increment;
-        counter.innerHTML = `<span class="plus">+</span>${Math.floor(count)}${suffix}`;
-        requestAnimationFrame(updateCounter);
-      } else {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const suffix = counter.getAttribute("data-suffix") || "";
+      const value = Math.floor(progress * target);
+      counter.innerHTML = `<span class="plus">+</span>${value}${suffix}`;
+    });
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCounters);
+    } else {
+      // نخلي الكل يوقف على الرقم النهائي بالظبط
+      counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        const suffix = counter.getAttribute("data-suffix") || "";
         counter.innerHTML = `<span class="plus">+</span>${target}${suffix}`;
-      }
-    };
+      });
+    }
+  };
 
-    updateCounter();
-  });
+  requestAnimationFrame(updateCounters);
 }
 
 // تشغيل العدادات لما تظهر في الشاشة
-const countersSection = document.querySelector(".stats"); // العنصر الأب للعدادات
+const countersSection = document.querySelector(".stats");
 if (countersSection) {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        startCounters(); // شغّل العدادات
-        observer.disconnect(); // بعد التشغيل مرة واحدة، وقف observer
+        startCounters();
+        observer.disconnect();
       }
     });
-  }, { threshold: 0.5 }); // يشغّل لما نصف العنصر يظهر
+  }, { threshold: 0.5 });
 
   observer.observe(countersSection);
 }
 </script>
+
+
 
 <section class="py-5" style="background-color:#f8f9fa;">
   <div class="container">
@@ -293,7 +305,7 @@ if (countersSection) {
 <section class="video-section">
   <div class="container">
     <h2 class="section-title">
-      Real-world examples of how we have helped companies achieve their marketing objectives.
+      Real-world examples of how we have helped Brands achieve their marketing objectives.
     </h2>
 
     <br><br>
@@ -398,7 +410,6 @@ if (countersSection) {
 
 <style>
 
-
 .video-section {
   background: linear-gradient(135deg, #F3E7D9, #E3EEFF);
   padding: 60px 20px;
@@ -490,17 +501,36 @@ if (countersSection) {
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
+/* تعديل على الموبايل */
+@media (max-width: 991px) {
+  .slider {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* يخفي الاسكرول بار */
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+
   .slides {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    animation: none; /* نوقف الانيميشن */
+    gap: 20px;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
   }
 }
 
+/* الأنيميشن للـ Desktop */
 @keyframes slide {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
 </style>
 
 
@@ -812,9 +842,47 @@ if (countersSection) {
           <textarea class="form-control input-long ps-3" id="message" name="message" rows="4" placeholder="Write your Message" required></textarea>
         </div>
         <!-- Button -->
-<button type="submit" class="btn submit-btn">
-  <span class="btn-text">Send Message</span>
-</button>
+<div class="text-center">
+  <button type="submit" class="btn submit-btn">
+    <span class="btn-text">Send Message</span>
+  </button>
+</div>
+
+<style>
+  .submit-btn {
+    width: 210px;
+    height: 68px;
+    border-radius: 192px;
+    background: #29ABE2;
+    border: 2px solid #FFFFFFCC; /* أبيض شفاف */
+    box-shadow: 0px 30px 50px 0px #29ABE226;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 0 auto; /* للتأكد من التوسيط */
+  }
+
+  .submit-btn:hover {
+    background: #1f94c7; /* لون أغمق شوية عند الهوفر */
+  }
+
+  .btn-text {
+    width: 127px;
+    height: 21px;
+
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: #FFFFFF;
+    text-align: center;
+  }
+</style>
+
 
 <style>
   .submit-btn {
@@ -948,12 +1016,8 @@ if (countersSection) {
     font-size: 16px;
   }
 </style>
-
 <!-- Footer -->
-<footer class="pt-4" style="
-  background-color: #282c4b;
-  color: white;
-">
+<footer class="pt-4" style="background-color: #282c4b; color: white;">
   <div class="container">
     <br>
     <div class="row align-items-center">
@@ -976,20 +1040,87 @@ if (countersSection) {
       </div>
     </div>
 
-    <!-- Links -->
+    <!-- Links & Socials -->
     <hr class="border-light">
-    <div class="d-flex justify-content-center mb-3">
-      <ul class="list-inline mb-0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <!-- روابط -->
+      <ul class="list-inline mb-0 mx-auto">
         <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-
         <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
+
+      <!-- أيقونات السوشيال -->
+      <div class="d-flex align-items-center">
+        <a href="https://www.tiktok.com/@sabeq_official?_t=ZN-9053avA45jy&_r=1" target="_blank" class="social-frame me-2">
+          <i class="bi bi-tiktok small-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/sabeq_official?igsh=MXhvam54M3VtangxeA==" target="_blank" class="social-frame">
+          <i class="bi bi-instagram small-icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- حقوق النشر والتسجيل -->
+    <div class="text-center mt-3" style="font-size: 0.85rem; color: #ccc;">
+      <p class="mb-1">© 2025 Sabeq. All Rights Reserved.</p>
+      <p class="mb-1">VAT Registration Number: 312811302900003</p>
+      <p class="mb-1">CR: 7035659916 | Effective Registration Date: 04/08/2025</p>
+      <!-- علم السعودية -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" 
+           alt="Saudi Arabia Flag" 
+           class="saudi-flag mt-2">
     </div>
   </div>
   <br>
 </footer>
 
+<!-- CSS -->
+<style>
+  .small-icon {
+    font-size: 0.9rem; 
+    transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+  }
+
+  .social-frame {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; 
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-frame:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  .social-frame:hover .bi-tiktok {
+    color: #000;
+  }
+
+  .social-frame:hover .bi-instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* علم السعودية */
+  .saudi-flag {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .saudi-flag:hover {
+    transform: scale(1.2);
+  }
+</style>
 
 <script src="bootstrap.bundle.min.js"></script>
 </body>
