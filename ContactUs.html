@@ -55,6 +55,9 @@
   transition: all 0.3s ease;
   padding: 20px 0;
 }
+.navbar img {
+  transition: all 0.3s ease;
+}
 
 /* لما يحصل scroll */
 .navbar.shrink {
@@ -197,51 +200,90 @@
       </div>
     </div>
   </div>
+<!-- Choose Your Brand -->
+<div class="mb-4">
+  <div style="background:#FFFFFF; border-radius:20px; padding:20px; 
+              box-shadow:-40px 100px 70px 0px #29ABE20D, 40px 0px 70px 0px #29ABE20D;">
+    <label class="d-block mb-3" 
+           style="font-weight:500; font-size:18px; line-height:150%; color:#000;">
+      Choose Your Brand
+    </label>
+    <div class="row g-3">
 
-  <!-- Choose Your Brand -->
-  <div class="mb-4">
-    <div style="background:#FFFFFF; border-radius:20px; padding:20px; 
-                box-shadow:-40px 100px 70px 0px #29ABE20D, 40px 0px 70px 0px #29ABE20D;">
-      <label class="d-block mb-3" 
-             style="font-weight:500; font-size:18px; line-height:150%; color:#000;">
-        Choose Your Brand
-      </label>
-      <div class="row g-3">
-
-        <!-- Restaurant -->
-        <div class="col-md-6">
-          <div class="form-check">
-            <input class="form-check-input brand-checkbox" type="checkbox" id="restaurant" name="brand" value="Restaurant">
-            <label class="form-check-label" for="restaurant">Restaurant</label>
-          </div>
+      <!-- Restaurant -->
+      <div class="col-md-6">
+        <div class="form-check">
+          <input class="form-check-input brand-radio" type="radio" id="restaurant" name="brand" value="Restaurant">
+          <label class="form-check-label" for="restaurant">Restaurant</label>
         </div>
+      </div>
 
-        <!-- Cafe -->
-        <div class="col-md-6">
-          <div class="form-check">
-            <input class="form-check-input brand-checkbox" type="checkbox" id="cafe" name="brand" value="Cafe">
-            <label class="form-check-label" for="cafe">Cafe</label>
-          </div>
+      <!-- Cafe -->
+      <div class="col-md-6">
+        <div class="form-check">
+          <input class="form-check-input brand-radio" type="radio" id="cafe" name="brand" value="Cafe">
+          <label class="form-check-label" for="cafe">Cafe</label>
         </div>
+      </div>
 
-        <!-- Brands -->
-        <div class="col-md-6">
-          <div class="form-check">
-            <input class="form-check-input brand-checkbox" type="checkbox" id="brands" name="brand" value="Brands">
-            <label class="form-check-label" for="brands">Brands</label>
-          </div>
+      <!-- Brands -->
+      <div class="col-md-6">
+        <div class="form-check">
+          <input class="form-check-input brand-radio" type="radio" id="brands" name="brand" value="Brands">
+          <label class="form-check-label" for="brands">Brands</label>
         </div>
+      </div>
 
-        <!-- Others -->
-        <div class="col-md-6">
-          <div class="form-check">
-            <input class="form-check-input brand-checkbox" type="checkbox" id="others" name="brand" value="Others">
-            <label class="form-check-label" for="others">Others</label>
-          </div>
+      <!-- Others -->
+      <div class="col-md-6">
+        <div class="form-check">
+          <input class="form-check-input brand-radio" type="radio" id="others" name="brand" value="Others">
+          <label class="form-check-label" for="others">Others</label>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<style>
+/* إخفاء الشكل الافتراضي */
+.brand-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%; /* دائرة */
+  background: #29ABE20D;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 8px;
+}
+
+/* لما يتعمل hover */
+.brand-radio:hover {
+  box-shadow: 0 0 0 2px #29ABE2;
+}
+
+/* الشكل عند التحديد */
+.brand-radio:checked {
+  background: #29ABE20D;
+  border: 2px solid #29ABE2;
+}
+
+/* علامة الصح */
+.brand-radio:checked::after {
+  content: "";
+  width: 12px;
+  height: 10px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10' fill='none'><path d='M1 5L4.5 8.5L11 1.5' stroke='%2329ABE2' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat center center;
+  background-size: contain;
+  display: block;
+}
+</style>
 
   <!-- Message -->
   <div class="mb-4">
@@ -297,14 +339,10 @@
 
 
 
-
-
 <!-- Footer -->
-<footer class="pt-4" style="
-  background-color: #282c4b;
-  color: white;
-">
+<footer class="pt-4" style="background-color: #282c4b; color: white;">
   <div class="container">
+    <br>
     <div class="row align-items-center">
       <!-- جهة اليسار -->
       <div class="col-md-6 mb-3 mb-md-0">
@@ -325,22 +363,88 @@
       </div>
     </div>
 
-    <!-- Links -->
+    <!-- Links & Socials -->
     <hr class="border-light">
-    <div class="d-flex justify-content-center mb-3">
-      <ul class="list-inline mb-0">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <!-- روابط -->
+      <ul class="list-inline mb-0 mx-auto">
         <li class="list-inline-item mx-3"><a href="home.html" class="text-white text-decoration-none">Home</a></li>
-
         <li class="list-inline-item mx-3"><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
         <li class="list-inline-item mx-3"><a href="ContactUs.html" class="text-white text-decoration-none">Contact</a></li>
       </ul>
+
+      <!-- أيقونات السوشيال -->
+      <div class="d-flex align-items-center">
+        <a href="https://www.tiktok.com/@sabeq_official?_t=ZN-9053avA45jy&_r=1" target="_blank" class="social-frame me-2">
+          <i class="bi bi-tiktok small-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/sabeq_official?igsh=MXhvam54M3VtangxeA==" target="_blank" class="social-frame">
+          <i class="bi bi-instagram small-icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- حقوق النشر والتسجيل -->
+    <div class="text-center mt-3" style="font-size: 0.85rem; color: #ccc;">
+      <p class="mb-1">© 2025 Sabeq. All Rights Reserved.</p>
+      <p class="mb-1">VAT Registration Number: 312811302900003</p>
+      <p class="mb-1">CR: 7035659916 | Effective Registration Date: 04/08/2025</p>
+      <!-- علم السعودية -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" 
+           alt="Saudi Arabia Flag" 
+           class="saudi-flag mt-2">
     </div>
   </div>
   <br>
 </footer>
+
+<!-- CSS -->
+<style>
+  .small-icon {
+    font-size: 0.9rem; 
+    transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+  }
+
+  .social-frame {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; 
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .social-frame:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  .social-frame:hover .bi-tiktok {
+    color: #000;
+  }
+
+  .social-frame:hover .bi-instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* علم السعودية */
+  .saudi-flag {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .saudi-flag:hover {
+    transform: scale(1.2);
+  }
+</style>
+
 <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
